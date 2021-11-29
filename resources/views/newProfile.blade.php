@@ -69,7 +69,7 @@
       id="sec-aada"
     >
       <a
-        href="Display-items.html"
+        href="{{ url('/displayItems') }}"
         class="u-image u-logo u-image-1"
         data-image-width="497"
         data-image-height="190"
@@ -145,7 +145,7 @@
             u-text-hover-grey-5
             u-btn-1
           "
-          href="AccountOptions.html"
+          href="{{ url('/accountOptions') }}"
           data-page-id="63988307"
           ><span class="u-icon u-icon-1"
             ><svg
@@ -188,7 +188,7 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <span
           class="u-icon u-icon-circle u-text-palette-1-dark-2 u-icon-1"
-          data-href="AddAccommodation.html"
+          data-href="{{ url('/addAccommodation') }}"
           data-page-id="898807462"
           ><svg
             class="u-svg-link"
@@ -236,7 +236,7 @@
               u-text-palette-1-base
               u-btn-1
             "
-            href="AddAccommodation.html"
+            href="{{ url('/addAccommodation') }}"
             data-page-id="898807462"
             >Add Accommodation</a
           >

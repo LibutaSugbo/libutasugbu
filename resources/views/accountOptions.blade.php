@@ -58,7 +58,7 @@
       id="sec-aada"
     >
       <a
-        href="Display-items.html"
+        href="{{ url('/displayItems') }}"
         class="u-image u-logo u-image-1"
         data-image-width="497"
         data-image-height="190"
@@ -134,7 +134,7 @@
             u-text-hover-grey-5
             u-btn-1
           "
-          href="AccountOptions.html"
+          href="{{ url('/accountOptions') }}"
           data-page-id="63988307"
           ><span class="u-icon u-icon-1"
             ><svg
@@ -405,7 +405,7 @@
                         u-repeater-item
                         u-shape-round
                       "
-                      data-href="Messages.html"
+                      data-href="{{ url('/messages') }}"
                       data-page-id="14657406"
                     >
                       <div
@@ -479,7 +479,7 @@
                         u-repeater-item
                         u-shape-round
                       "
-                      data-href="Messages.html"
+                      data-href="{{ url('/messages') }}"
                       data-page-id="14657406"
                     >
                       <div
@@ -556,7 +556,7 @@
                         u-repeater-item
                         u-shape-round
                       "
-                      data-href="Messages.html"
+                      data-href="{{ url('/messages') }}"
                       data-page-id="14657406"
                     >
                       <div
@@ -648,7 +648,7 @@
                         u-repeater-item
                         u-shape-round
                       "
-                      data-href="Notifications.html"
+                      data-href="{{ url('/notification') }}"
                       data-page-id="42865631"
                     >
                       <div
@@ -717,7 +717,7 @@
                         u-repeater-item
                         u-shape-round
                       "
-                      data-href="Notifications.html"
+                      data-href="{{ url('/notification') }}"
                       data-page-id="42865631"
                     >
                       <div
@@ -786,7 +786,7 @@
                         u-repeater-item
                         u-shape-round
                       "
-                      data-href="Notifications.html"
+                      data-href="{{ url('/notification') }}"
                       data-page-id="42865631"
                     >
                       <div
@@ -906,7 +906,7 @@
                               u-palette-1-base
                               u-btn-2
                             "
-                            href="History.html"
+                            href="{{ url('/history') }}"
                             data-page-id="2798617253"
                             >VIEW</a
                           >
@@ -934,7 +934,7 @@
                               u-palette-1-base
                               u-btn-3
                             "
-                            href="Log-in.html"
+                            href="{{ url('/login') }}"
                             data-page-id="162338383"
                             >VIEW</a
                           >
@@ -962,7 +962,7 @@
                               u-palette-1-base
                               u-btn-4
                             "
-                            href="History.html"
+                            href="{{ url('/history') }}"
                             data-page-id="2798617253"
                             >VIEW</a
                           >
@@ -990,7 +990,7 @@
                               u-palette-1-base
                               u-btn-5
                             "
-                            href="History.html"
+                            href="{{ url('/history') }}"
                             data-page-id="2798617253"
                             >VIEW</a
                           >
@@ -1101,7 +1101,7 @@
                   "
                 >
                   <form
-                    action="Verification.html"
+                    action="{{ url('/verification') }}"
                     method="POST"
                     class="
                       u-clearfix

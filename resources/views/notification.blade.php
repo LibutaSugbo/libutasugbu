@@ -64,7 +64,7 @@
       id="sec-aada"
     >
       <a
-        href="display-tems.html"
+        href="{{ url('/displayItems') }}"
         class="u-image u-logo u-image-1"
         data-image-width="497"
         data-image-height="190"
@@ -140,7 +140,7 @@
             u-text-hover-grey-5
             u-btn-1
           "
-          href="AccountOptions.html"
+          href="{{ url('/accountOptions') }}"
           data-page-id="63988307"
           ><span class="u-icon u-icon-1"
             ><svg

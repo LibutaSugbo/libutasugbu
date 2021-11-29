@@ -6,7 +6,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="page_type" content="np-template-header-footer-from-plugin" />
-    <title>Display-items</title>
+    <title>displayItems</title>
     <link rel="stylesheet" href="/css/nicepage.css" media="screen" />
     <link rel="stylesheet" href="/css/Display-items.css" media="screen" />
     <script
@@ -44,9 +44,9 @@
     <meta name="theme-color" content="#478ac9" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Display-items" />
+    <meta name="twitter:title" content="displayItems" />
     <meta name="twitter:description" content="LibutaSugbo" />
-    <meta property="og:title" content="Display-items" />
+    <meta property="og:title" content="displayItems" />
     <meta property="og:description" content="" />
     <meta property="og:type" content="website" />
   </head>
@@ -58,7 +58,7 @@
       id="sec-aada"
     >
       <a
-        href="display-tems.html"
+        href="{{ url('/displayItems') }}"
         class="u-image u-logo u-image-1"
         data-image-width="497"
         data-image-height="190"
@@ -134,7 +134,7 @@
             u-text-hover-grey-5
             u-btn-1
           "
-          href="AccountOptions.html"
+          href="{{ url('/accountOptions') }}"
           data-page-id="63988307"
           ><span class="u-icon u-icon-1"
             ><svg
@@ -159,7 +159,7 @@
         <div class="u-container-style u-group u-group-1">
           <div class="u-container-layout">
             <a
-              href="AddAccommodation.html"
+              href="{{ url('/addAccommodation') }}"
               data-page-id="898807462"
               class="
                 u-border-3
@@ -177,7 +177,7 @@
               >Add accommodation</a
             >
             <a
-              href="AddPackageDeal.html"
+              href="{{ url('/addPackageDeal') }}"
               data-page-id="81417355"
               class="
                 u-border-3
@@ -214,7 +214,7 @@
               >
                 <img
                   class="u-expanded-width u-image u-image-default u-image-1"
-                  src="images/04c7a1b62fec92c90cfedcc193c5b6111d67e8796b0a8ea77480d6ddee3b5bdb1fe29b78ce440a878819d5331984943c5a2e3958062a8aa9041978_1280.jpg"
+                  src="/img/04c7a1b62fec92c90cfedcc193c5b6111d67e8796b0a8ea77480d6ddee3b5bdb1fe29b78ce440a878819d5331984943c5a2e3958062a8aa9041978_1280.jpg"
                   alt=""
                   data-image-width="1280"
                   data-image-height="852"
@@ -243,7 +243,7 @@
                   >Delete</a
                 >
                 <a
-                  href="AddAccommodation.html"
+                  href="{{ url('/addAccommodation') }}"
                   data-page-id="898807462"
                   class="
                     u-border-2
@@ -307,7 +307,7 @@
                   >Delete</a
                 >
                 <a
-                  href="AddAccommodation.html"
+                  href="{{ url('/addAccommodation') }}"
                   data-page-id="898807462"
                   class="
                     u-border-2
@@ -371,7 +371,7 @@
                   >Delete</a
                 >
                 <a
-                  href="AddAccommodation.html"
+                  href="{{ url('/addAccommodation') }}"
                   data-page-id="898807462"
                   class="
                     u-border-2
@@ -435,7 +435,7 @@
                   >Delete</a
                 >
                 <a
-                  href="AddAccommodation.html"
+                  href="{{ url('/addAccommodation') }}"
                   data-page-id="898807462"
                   class="
                     u-border-2
@@ -499,7 +499,7 @@
                   >Delete</a
                 >
                 <a
-                  href="AddAccommodation.html"
+                  href="{{ url('/addAccommodation') }}"
                   data-page-id="898807462"
                   class="
                     u-border-2
@@ -563,7 +563,7 @@
                   >Delete</a
                 >
                 <a
-                  href="AddAccommodation.html"
+                  href="{{ url('/addAccommodation') }}"
                   data-page-id="898807462"
                   class="
                     u-border-2

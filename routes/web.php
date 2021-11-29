@@ -44,4 +44,12 @@ Route::get('/logout', [SessionController::class,'destroy']);
 
 Route::get('/resortNewProfile', [AccommodationController::class,'create']);
 Route::get('/addAccommodation', [AccommodationController::class,'addAccommodation']);
+Route::get('/addPackageDeal', [AccommodationController::class,'addPackageDeal']);
 Route::get('/page2', [RegistrationController::class,'page2']);
+
+Route::get('/accountOptions', [AccommodationController::class,'accountOptions']);
+Route::get('/displayItems', [AccommodationController::class,'displayItems']);
+Route::get('/history', [AccommodationController::class,'history']);
+Route::get('/messages', [AccommodationController::class,'messages']);
+Route::get('/newProfile', [AccommodationController::class,'newProfile']);
+Route::get('/notification', [AccommodationController::class,'notification']);
