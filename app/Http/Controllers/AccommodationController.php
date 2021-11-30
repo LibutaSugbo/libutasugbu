@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Validation\Rules\Password;
 class AccommodationController extends Controller
 {
     public function create(){

@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Validation\Rules\Password;
 class RegistrationController extends Controller
 {
     public function home(){
@@ -18,7 +19,7 @@ class RegistrationController extends Controller
     }
 
     public function storeresort(){
-        $this->validate(request(), [
+       /* $this->validate(request(), [
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required|confirmed'
@@ -28,13 +29,20 @@ class RegistrationController extends Controller
         
         auth()->login($user);
         
-        return redirect()->to('/games');
+        return redirect()->to('/games'); */
     }
 
     public function createbnb(){
+        
         return view('registration.su-bnb');
     }
     public function storebnb(){
+        /*$request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|confirmed'
+        ]);
+        
         $this->validate(request(), [
             'name' => 'required',
             'email' => 'required|email',
@@ -46,6 +54,7 @@ class RegistrationController extends Controller
         auth()->login($user);
         
         return redirect()->to('/games');
+        */
     }
     
     public function createrentalv(){
@@ -53,49 +62,19 @@ class RegistrationController extends Controller
     }
 
     public function storerentalv(){
-        $this->validate(request(), [
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|confirmed'
-        ]);
         
-        $user = User::create(request(['name', 'email', 'password']));
-        
-        auth()->login($user);
-        
-        return redirect()->to('/games');
     }
     public function createtour(){
         return view('registration.su-tourspot');
     }
     public function storetour(){
-        $this->validate(request(), [
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|confirmed'
-        ]);
-        
-        $user = User::create(request(['name', 'email', 'password']));
-        
-        auth()->login($user);
-        
-        return redirect()->to('/games');
+       
     }
     public function createresto(){
         return view('registration.su-restoncafe');
     }
     public function storeresto(){
-        $this->validate(request(), [
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|confirmed'
-        ]);
         
-        $user = User::create(request(['name', 'email', 'password']));
-        
-        auth()->login($user);
-        
-        return redirect()->to('/games');
     }
 
 

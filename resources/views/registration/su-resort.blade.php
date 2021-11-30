@@ -104,7 +104,7 @@
             </div>
             <div class="u-form-group u-form-phone u-form-group-6">
               <label for="phone-b658" class="u-label">Contact Details</label>
-              <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Telephone No." id="phone-b658" name="Tel_Num" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="tel"  placeholder="Telephone No." id="phone-b658" name="Tel_Num" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-email u-form-group u-form-group-7">
               <label for="email-6206" class="u-label">Website (optional)</label>
@@ -135,10 +135,6 @@
             <input type="hidden" value="" name="recaptchaResponse">
           </form>
         </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-3" id="sec-d7c7">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><span class="u-file-icon u-icon u-icon-circle u-text-palette-1-base u-icon-1" data-href="{{ url('/verification') }}" data-page-id="82053947"><img src="/img/right.png" alt=""></span>
       </div>
     </section>
     @extends('layouts/footerLayout')

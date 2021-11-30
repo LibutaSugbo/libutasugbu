@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -80,8 +81,9 @@
     <section class="u-clearfix u-section-2" id="sec-47c9">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="signup-form u-align-right u-border-3 u-border-grey-75 u-form u-palette-5-light-3 u-radius-14 u-form-1">
-          <form action="#Verification" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">
-            <div class="u-form-group u-form-name">
+          <form action="{{ url('/su-bnb') }}" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">  
+          <div class="u-form-group u-form-name">
               <label for="name-20d2" class="u-label">First Name</label>
               <input type="text" placeholder="First name" id="first_name" name="first_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
@@ -107,7 +109,7 @@
             </div>
             <div class="u-form-group u-form-phone u-form-group-7">
               <label for="phone-b658" class="u-label">Contact Details</label>
-              <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Telephone No." id="phone-b658" name="Tel_Num" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="tel"  placeholder="Telephone No." id="phone-b658" name="Tel_Num" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-email u-form-group u-form-group-8">
               <label for="email-6206" class="u-label">Website (optional)</label>
@@ -125,23 +127,20 @@
               <label for="text-175a" class="u-label">Confirm Password</label>
               <input type="text" placeholder="Retype your password" id="confirm_pass" name="confirm_pass" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
+            
             <div class="u-form-group u-form-textarea u-form-group-12">
               <label for="textarea-504d" class="u-label">About you</label>
               <textarea rows="4" cols="50" id="textarea-504d" name="about" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Talk about you..."></textarea>
             </div>
             <div class="u-align-center u-form-group u-form-submit">
-              <a href="#" class="u-border-2 u-border-black u-btn u-btn-round u-btn-submit u-button-style u-hover-black u-none u-radius-12 u-text-black u-text-hover-white u-btn-1">Submit</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
+              <a href="{{ url('/su-bnb') }}" class="u-border-2 u-border-black u-btn u-btn-round u-btn-submit u-button-style u-hover-black u-none u-radius-12 u-text-black u-text-hover-white u-btn-1">Submit</a>
+              <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
             <input type="hidden" value="" name="recaptchaResponse">
           </form>
         </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-3" id="sec-17ea">
-      <div class="u-clearfix u-sheet u-sheet-1"><span class="u-file-icon u-icon u-icon-circle u-text-palette-1-base u-icon-1" data-href="{{ url('/verification') }}" data-page-id="82053947"><img src="/img/right.png" alt=""></span>
       </div>
     </section>
     @extends('layouts/footerLayout')

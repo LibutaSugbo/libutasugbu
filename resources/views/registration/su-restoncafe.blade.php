@@ -370,7 +370,6 @@
               <label for="phone-b658" class="u-label">Contact Details</label>
               <input
                 type="tel"
-                pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})"
                 placeholder="Telephone No."
                 id="phone-b658"
                 name="Tel_Num"
@@ -478,18 +477,6 @@
             <input type="hidden" value="" name="recaptchaResponse" />
           </form>
         </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-3" id="sec-3784">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <span
-          class="
-            u-file-icon u-icon u-icon-circle u-text-palette-1-base u-icon-1
-          "
-          data-href="{{ url('/verification') }}"
-          data-page-id="82053947"
-          ><img src="/img/right.png" alt=""
-        /></span>
       </div>
     </section>
     @extends('layouts/footerLayout')
