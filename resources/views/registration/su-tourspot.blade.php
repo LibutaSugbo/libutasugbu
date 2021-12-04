@@ -82,8 +82,8 @@
         <div class="signup-form u-align-right u-border-3 u-border-grey-75 u-form u-palette-5-light-3 u-radius-14 u-form-1">
           <form action="#" method="POST" class="u-clearfix u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;">
             <div class="u-form-group u-form-name">
-              <label for="name-20d2" class="u-label">Resto/Cafe Name</label>
-              <input type="text" placeholder="Resto/Cafe name" id="restoCafe_name" name="restoCafe_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <label for="name-20d2" class="u-label">Tourist Spot Name</label>
+              <input type="text" placeholder="Tourist Spot Name" id="b_name" name="b_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-address u-form-group u-form-group-2">
               <label for="address-6a68" class="u-label">City/Municipality</label>
@@ -121,9 +121,9 @@
               <label for="text-175a" class="u-label">Confirm Password</label>
               <input type="text" placeholder="Retype your password" id="confirm_pass" name="confirm_pass" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
-            <div class="u-form-group u-form-textarea u-form-group-11">
-              <label for="textarea-c42b" class="u-label">About you</label>
-              <textarea rows="4" cols="50" id="textarea-c42b" name="about" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Talk about you..."></textarea>
+            <div class="u-form-group u-form-textarea u-form-group-12">
+              <label for="textarea-504d" class="u-label">Directions of the Place (Landmarks)</label>
+              <textarea rows="4" cols="50" id="textarea-504d" name="direction" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Directions of the Place (You may include landmarks)"></textarea>
             </div>
             <div class="u-align-center u-form-group u-form-submit">
               <a href="#" class="u-border-2 u-border-black u-btn u-btn-round u-btn-submit u-button-style u-hover-black u-none u-radius-12 u-text-black u-text-hover-white u-btn-1">Submit</a>

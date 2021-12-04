@@ -304,13 +304,29 @@
               <input
                 type="text"
                 placeholder="Resort Name"
-                id="resort_name"
-                name="resort_name"
+                id="b_name"
+                name="b_name"
                 class="
                   u-border-1 u-border-grey-30 u-input u-input-rectangle u-white
                 "
                 required=""
               />
+            </div>
+            <div class="u-form-group u-form-name">
+              <label for="name-20d2" class="u-label">First Name</label>
+              <input type="text" placeholder="First name" id="first_name" name="first_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+            </div>
+            <div class="u-form-group u-form-group-2">
+              <label for="text-afab" class="u-label">Last Name</label>
+              <input type="text" placeholder="Last name" id="last_name" name="last_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
+            </div>
+            <div class="u-form-group u-form-group-2">
+              <label for="text-afab" class="u-label">Middle Name</label>
+              <input type="text" placeholder="Middle name" id="mid_name" name="mid_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+            </div>
+            <div class="u-form-group u-form-group-2">
+              <label for="text-afab" class="u-label">Extension Name</label>
+              <input type="text" placeholder="Extension name" id="ext_name" name="ext_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-address u-form-group u-form-group-2">
               <label for="address-6a68" class="u-label"
@@ -429,19 +445,9 @@
                 "
                 required="required"
               />
-            </div>
-            <div class="u-form-group u-form-textarea u-form-group-11">
-              <label for="textarea-d376" class="u-label">About you</label>
-              <textarea
-                rows="4"
-                cols="50"
-                id="textarea-d376"
-                name="about"
-                class="
-                  u-border-1 u-border-grey-30 u-input u-input-rectangle u-white
-                "
-                placeholder="Talk about you..."
-              ></textarea>
+            </div><div class="u-form-group u-form-textarea u-form-group-12">
+              <label for="textarea-504d" class="u-label">Directions of the Place (Landmarks)</label>
+              <textarea rows="4" cols="50" id="textarea-504d" name="direction" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Directions of the Place (You may include landmarks)"></textarea>
             </div>
             <div class="u-align-center u-form-group u-form-submit">
               <a

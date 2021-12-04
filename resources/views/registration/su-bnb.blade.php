@@ -84,32 +84,44 @@
           <form action="{{ url('/su-bnb') }}" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">  
           <div class="u-form-group u-form-name">
+            <label for="name-20d2" class="u-label">BnB Name</label>
+            <input type="text" placeholder="BnB Name" id="b_name" name="b_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
+          </div>
+          <div class="u-form-group u-form-name">
               <label for="name-20d2" class="u-label">First Name</label>
-              <input type="text" placeholder="First name" id="first_name" name="first_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="First name" id="first_name" name="first_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-form-group u-form-group-2">
               <label for="text-afab" class="u-label">Last Name</label>
               <input type="text" placeholder="Last name" id="last_name" name="last_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
+            <div class="u-form-group u-form-group-2">
+              <label for="text-afab" class="u-label">Middle Name</label>
+              <input type="text" placeholder="Middle name" id="mid_name" name="mid_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" >
+            </div>
+            <div class="u-form-group u-form-group-2">
+              <label for="text-afab" class="u-label">Extension Name</label>
+              <input type="text" placeholder="Extension name" id="ext_name" name="ext_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" >
+            </div>
             <div class="u-form-address u-form-group u-form-group-3">
               <label for="address-6a68" class="u-label">City/Municipality</label>
-              <input type="text" placeholder="City/Municipality" id="address-6a68" name="city_mun" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="City/Municipality" id="address-6a68" name="city_mun" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-form-address u-form-group u-form-group-4">
               <label for="address-d999" class="u-label">Barangay</label>
-              <input type="text" placeholder="Barangay" id="address-d999" name="Barangay" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="Barangay" id="address-d999" name="Barangay" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-form-address u-form-group u-form-group-5">
               <label for="address-669e" class="u-label">Street</label>
-              <input type="text" placeholder="Street" id="address-669e" name="Street" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="Street" id="address-669e" name="Street" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-form-address u-form-group u-form-group-6">
               <label for="address-5754" class="u-label">Zipcode</label>
-              <input type="text" placeholder="Zipcode" id="address-5754" name="address-2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="Zipcode" id="address-5754" name="address-2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-form-group u-form-phone u-form-group-7">
               <label for="phone-b658" class="u-label">Contact Details</label>
-              <input type="tel"  placeholder="Telephone No." id="phone-b658" name="Tel_Num" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="tel"  placeholder="Telephone No." id="phone-b658" name="Tel_Num" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-form-email u-form-group u-form-group-8">
               <label for="email-6206" class="u-label">Website (optional)</label>
@@ -117,7 +129,7 @@
             </div>
             <div class="u-form-email u-form-group u-form-group-9">
               <label for="email-51f8" class="u-label">Email</label>
-              <input type="email" placeholder="Enter an email address" id="email" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="email" placeholder="Enter an email address" id="email" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-form-group u-form-group-10">
               <label for="text-324a" class="u-label">Password</label>
@@ -129,8 +141,8 @@
             </div>
             
             <div class="u-form-group u-form-textarea u-form-group-12">
-              <label for="textarea-504d" class="u-label">About you</label>
-              <textarea rows="4" cols="50" id="textarea-504d" name="about" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Talk about you..."></textarea>
+              <label for="textarea-504d" class="u-label">Directions of the Place (Landmarks)</label>
+              <textarea rows="4" cols="50" id="textarea-504d" name="direction" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Directions of the Place (You may include landmarks)"></textarea>
             </div>
             <div class="u-align-center u-form-group u-form-submit">
               <a href="{{ url('/su-bnb') }}" class="u-border-2 u-border-black u-btn u-btn-round u-btn-submit u-button-style u-hover-black u-none u-radius-12 u-text-black u-text-hover-white u-btn-1">Submit</a>

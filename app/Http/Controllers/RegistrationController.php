@@ -38,25 +38,21 @@ class RegistrationController extends Controller
         
         return view('registration.su-bnb');
     }
-    public function storebnb(){
-        /*$request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|confirmed'
+    public function storebnb(Request $request){
+         $validatedData = $request->validate([
+                'b_name' => 'required',
+                'password' => 'required|min:5',
+                'email' => 'required|email|unique:users'
+            ], [
+                'name.required' => 'Name is required',
+                'password.required' => 'Password is required'
+            ]);
+        $validatedData['password'] = bcrypt($validatedData['password']);
+        $user = User::create($validatedData);
+        DB::table('host')->insert([
+            'Host_Type' => "bnb",
         ]);
-        
-        $this->validate(request(), [
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|confirmed'
-        ]);
-        
-        $user = User::create(request(['name', 'email', 'password']));
-        
-        auth()->login($user);
-        
-        return redirect()->to('/games');
-        */
+        return back()->with('success', 'User created successfully.');
     }
     
     public function createrentalv(){
