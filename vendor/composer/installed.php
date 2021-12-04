@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'd4f13e07cd26ac9c200446b5beabdb4d22bc66c8',
+        'reference' => 'c68d26a3ee87fe3e4aa43cd7d37098891e7f2c3b',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -35,7 +35,7 @@
             'install_path' => __DIR__ . '/./package-versions-deprecated',
             'aliases' => array(),
             'reference' => 'b174585d1fe49ceed21928a945138948cb394600',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'cordoval/hamcrest-php' => array(
             'dev_requirement' => true,
@@ -65,7 +65,7 @@
             'install_path' => __DIR__ . '/../doctrine/cache',
             'aliases' => array(),
             'reference' => '331b4d5dbaeab3827976273e9356b3b453c300ce',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'doctrine/dbal' => array(
             'pretty_version' => '3.2.0',
@@ -74,7 +74,7 @@
             'install_path' => __DIR__ . '/../doctrine/dbal',
             'aliases' => array(),
             'reference' => '5d54f63541d7bed1156cb5c9b79274ced61890e4',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'doctrine/deprecations' => array(
             'pretty_version' => 'v0.5.3',
@@ -83,7 +83,7 @@
             'install_path' => __DIR__ . '/../doctrine/deprecations',
             'aliases' => array(),
             'reference' => '9504165960a1f83cc1480e2be1dd0a0478561314',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'doctrine/event-manager' => array(
             'pretty_version' => '1.1.1',
@@ -92,7 +92,7 @@
             'install_path' => __DIR__ . '/../doctrine/event-manager',
             'aliases' => array(),
             'reference' => '41370af6a30faa9dc0368c4a6814d596e81aba7f',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(
             'pretty_version' => '2.0.3',
@@ -454,7 +454,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'd4f13e07cd26ac9c200446b5beabdb4d22bc66c8',
+            'reference' => 'c68d26a3ee87fe3e4aa43cd7d37098891e7f2c3b',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -611,7 +611,7 @@
             'dev_requirement' => true,
         ),
         'ocramius/package-versions' => array(
-            'dev_requirement' => true,
+            'dev_requirement' => false,
             'replaced' => array(
                 0 => '1.11.99',
             ),
@@ -749,7 +749,7 @@
             'install_path' => __DIR__ . '/../psr/cache',
             'aliases' => array(),
             'reference' => 'aa5030cfa5405eccfdcb1083ce040c2cb8d253bf',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'psr/container' => array(
             'pretty_version' => '1.1.1',
@@ -891,6 +891,15 @@
             'install_path' => __DIR__ . '/../ramsey/uuid',
             'aliases' => array(),
             'reference' => 'fc9bb7fb5388691fd7373cd44dcb4d63bbcf24df',
+            'dev_requirement' => false,
+        ),
+        'reliese/laravel' => array(
+            'pretty_version' => 'v1.1.2',
+            'version' => '1.1.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../reliese/laravel',
+            'aliases' => array(),
+            'reference' => '47eeb40326767d555c54b15380a960acd6853675',
             'dev_requirement' => false,
         ),
         'rhumsaa/uuid' => array(

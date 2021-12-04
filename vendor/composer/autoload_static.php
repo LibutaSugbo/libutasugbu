@@ -89,6 +89,7 @@ class ComposerStaticInit28d70632edbd939d35f34a4df5dae088
         ),
         'R' => 
         array (
+            'Reliese\\' => 8,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
         ),
@@ -320,6 +321,10 @@ class ComposerStaticInit28d70632edbd939d35f34a4df5dae088
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Reliese\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/reliese/laravel/src',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -4805,6 +4810,39 @@ class ComposerStaticInit28d70632edbd939d35f34a4df5dae088
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
         'Ramsey\\Uuid\\Validator\\GenericValidator' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/GenericValidator.php',
         'Ramsey\\Uuid\\Validator\\ValidatorInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/ValidatorInterface.php',
+        'Reliese\\Coders\\CodersServiceProvider' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/CodersServiceProvider.php',
+        'Reliese\\Coders\\Console\\CodeModelsCommand' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Console/CodeModelsCommand.php',
+        'Reliese\\Coders\\Model\\Config' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Config.php',
+        'Reliese\\Coders\\Model\\Factory' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Factory.php',
+        'Reliese\\Coders\\Model\\Model' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Model.php',
+        'Reliese\\Coders\\Model\\ModelManager' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/ModelManager.php',
+        'Reliese\\Coders\\Model\\Mutation' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Mutation.php',
+        'Reliese\\Coders\\Model\\Mutator' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Mutator.php',
+        'Reliese\\Coders\\Model\\Relation' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Relation.php',
+        'Reliese\\Coders\\Model\\Relations\\BelongsTo' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Relations/BelongsTo.php',
+        'Reliese\\Coders\\Model\\Relations\\BelongsToMany' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Relations/BelongsToMany.php',
+        'Reliese\\Coders\\Model\\Relations\\HasMany' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Relations/HasMany.php',
+        'Reliese\\Coders\\Model\\Relations\\HasOne' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Relations/HasOne.php',
+        'Reliese\\Coders\\Model\\Relations\\HasOneOrMany' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Relations/HasOneOrMany.php',
+        'Reliese\\Coders\\Model\\Relations\\HasOneOrManyStrategy' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Relations/HasOneOrManyStrategy.php',
+        'Reliese\\Coders\\Model\\Relations\\ReferenceFactory' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Relations/ReferenceFactory.php',
+        'Reliese\\Coders\\Model\\Relations\\RelationHelper' => __DIR__ . '/..' . '/reliese/laravel/src/Coders/Model/Relations/RelationHelper.php',
+        'Reliese\\Database\\Eloquent\\BitBooleans' => __DIR__ . '/..' . '/reliese/laravel/src/Database/Eloquent/BitBooleans.php',
+        'Reliese\\Database\\Eloquent\\BlamableBehavior' => __DIR__ . '/..' . '/reliese/laravel/src/Database/Eloquent/BlamableBehavior.php',
+        'Reliese\\Database\\Eloquent\\Model' => __DIR__ . '/..' . '/reliese/laravel/src/Database/Eloquent/Model.php',
+        'Reliese\\Database\\Eloquent\\WhoDidIt' => __DIR__ . '/..' . '/reliese/laravel/src/Database/Eloquent/WhoDidIt.php',
+        'Reliese\\Meta\\Blueprint' => __DIR__ . '/..' . '/reliese/laravel/src/Meta/Blueprint.php',
+        'Reliese\\Meta\\Column' => __DIR__ . '/..' . '/reliese/laravel/src/Meta/Column.php',
+        'Reliese\\Meta\\MySql\\Column' => __DIR__ . '/..' . '/reliese/laravel/src/Meta/MySql/Column.php',
+        'Reliese\\Meta\\MySql\\Schema' => __DIR__ . '/..' . '/reliese/laravel/src/Meta/MySql/Schema.php',
+        'Reliese\\Meta\\Postgres\\Column' => __DIR__ . '/..' . '/reliese/laravel/src/Meta/Postgres/Column.php',
+        'Reliese\\Meta\\Postgres\\Schema' => __DIR__ . '/..' . '/reliese/laravel/src/Meta/Postgres/Schema.php',
+        'Reliese\\Meta\\Schema' => __DIR__ . '/..' . '/reliese/laravel/src/Meta/Schema.php',
+        'Reliese\\Meta\\SchemaManager' => __DIR__ . '/..' . '/reliese/laravel/src/Meta/SchemaManager.php',
+        'Reliese\\Meta\\Sqlite\\Column' => __DIR__ . '/..' . '/reliese/laravel/src/Meta/Sqlite/Column.php',
+        'Reliese\\Meta\\Sqlite\\Schema' => __DIR__ . '/..' . '/reliese/laravel/src/Meta/Sqlite/Schema.php',
+        'Reliese\\Support\\Classify' => __DIR__ . '/..' . '/reliese/laravel/src/Support/Classify.php',
+        'Reliese\\Support\\Dumper' => __DIR__ . '/..' . '/reliese/laravel/src/Support/Dumper.php',
         'ReturnTypeWillChange' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/ReturnTypeWillChange.php',
         'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
         'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
