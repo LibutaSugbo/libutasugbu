@@ -12,26 +12,27 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\HostController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\AccommodationController;
+use App\Http\Controllers\RegistrationController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/home', [RegistrationController::class,'home']);
+Route::get('/home', [HostController::class,'home']);
 
-Route::get('/signup', [RegistrationController::class,'create']);
-Route::get('/su-resort', [RegistrationController::class,'createresort']);
-Route::post('/su-resort', [RegistrationController::class,'storeresort']);
-Route::get('/su-bnb', [RegistrationController::class,'createbnb']);
-Route::post('/su-bnb', [RegistrationController::class,'storebnb']);
-Route::get('/su-rentalvehicles', [RegistrationController::class,'createrentalv']);
-Route::post('/su-rentalvehicles', [RegistrationController::class,'storerentalv']);
-Route::get('/su-restoncafe', [RegistrationController::class,'createresto']);
-Route::post('/su-restoncafe', [RegistrationController::class,'postresto']);
-Route::get('/su-tourspot', [RegistrationController::class,'createtour']);
-Route::post('/su-tourspot', [RegistrationController::class,'storetour']);
+Route::get('/signup', [HostController::class,'create']);
+Route::get('/su-resort', [HostController::class,'createresort']);
+Route::post('/storeSu_resort', [HostController::class,'storeresort']);
+Route::get('/su-bnb', [HostController::class,'createbnb']);
+Route::post('/storeSu_bnb', [HostController::class,'storebnb']);
+Route::get('/su-rentalvehicles', [HostController::class,'createrentalv']);
+Route::post('/storeSu_rentalvehicles', [HostController::class,'storerentalv']);
+Route::get('/su-restoncafe', [HostController::class,'createresto']);
+Route::post('/storeSu_restoncafe', [HostController::class,'postresto']);
+Route::get('/su-tourspot', [HostController::class,'createtour']);
+Route::post('/storeSu_tourspot', [HostController::class,'storetour']);
 
 
 Route::get('/verification', [RegistrationController::class,'verification']);

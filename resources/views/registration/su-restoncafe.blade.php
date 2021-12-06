@@ -375,7 +375,7 @@
                 type="text"
                 placeholder="Zipcode"
                 id="address-5754"
-                name="address-2"
+                name="address2"
                 class="
                   u-border-1 u-border-grey-30 u-input u-input-rectangle u-white
                 "
