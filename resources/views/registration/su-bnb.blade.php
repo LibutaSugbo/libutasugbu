@@ -81,7 +81,7 @@
     <section class="u-clearfix u-section-2" id="sec-47c9">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="signup-form u-align-right u-border-3 u-border-grey-75 u-form u-palette-5-light-3 u-radius-14 u-form-1">
-          <form action="{{ url('/su-bnb') }}" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">
+          <form action="{{ url('storeSu_bnb') }}" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">  
           <div class="u-form-group u-form-name">
             <label for="name-20d2" class="u-label">BnB Name</label>
@@ -117,7 +117,7 @@
             </div>
             <div class="u-form-address u-form-group u-form-group-6">
               <label for="address-5754" class="u-label">Zipcode</label>
-              <input type="text" placeholder="Zipcode" id="address-5754" name="address-2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
+              <input type="text" placeholder="Zipcode" id="address-5754" name="address2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
             </div>
             <div class="u-form-group u-form-phone u-form-group-7">
               <label for="phone-b658" class="u-label">Contact Details</label>

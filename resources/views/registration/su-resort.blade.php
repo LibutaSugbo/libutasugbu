@@ -116,7 +116,7 @@
             </div>
             <div class="u-form-address u-form-group u-form-group-5">
               <label for="address-5754" class="u-label">Zipcode</label>
-              <input type="text" placeholder="Zipcode" id="address-5754" name="address-2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="Zipcode" id="address-5754" name="address2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-group u-form-phone u-form-group-6">
               <label for="phone-b658" class="u-label">Contact Details</label>
