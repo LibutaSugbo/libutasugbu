@@ -104,7 +104,7 @@
         </div>
       </div>
     </section>
-    @extends('layouts/footerLayout')
+    @extends('host/layouts/footerLayout')
 
 @section('footer')
   </body>

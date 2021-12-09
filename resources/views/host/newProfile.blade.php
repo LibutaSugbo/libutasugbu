@@ -6,9 +6,9 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="page_type" content="np-template-header-footer-from-plugin" />
-    <title>Messages</title>
+    <title>NewProfile</title>
     <link rel="stylesheet" href="/css/nicepage.css" media="screen" />
-    <link rel="stylesheet" href="/css/Messages.css" media="screen" />
+    <link rel="stylesheet" href="/css/NewProfile.css" media="screen" />
     <script
       class="u-script"
       type="text/javascript"
@@ -27,6 +27,11 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
     />
+    <link
+      id="u-page-google-font"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+    />
 
     <script type="application/ld+json">
       {
@@ -44,9 +49,9 @@
     <meta name="theme-color" content="#478ac9" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Messages" />
+    <meta name="twitter:title" content="NewProfile" />
     <meta name="twitter:description" content="LibutaSugbo" />
-    <meta property="og:title" content="Messages" />
+    <meta property="og:title" content="NewProfile" />
     <meta property="og:description" content="" />
     <meta property="og:type" content="website" />
   </head>
@@ -160,107 +165,85 @@
         </a>
       </p>
     </header>
-    <section class="u-clearfix u-section-1" id="sec-a8fa">
+    <section class="u-clearfix u-section-1" id="sec-1705">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <span class="u-icon u-icon-circle u-icon-1"
+        <div
+          class="
+            u-container-style
+            u-group
+            u-opacity
+            u-opacity-85
+            u-palette-5-dark-1
+            u-shape-rectangle
+            u-group-1
+          "
+        >
+          <div class="u-container-layout u-container-layout-1">
+            <p class="u-text u-text-palette-2-light-3 u-text-1">RESORT</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="sec-fcc7">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <span
+          class="u-icon u-icon-circle u-text-palette-1-dark-2 u-icon-1"
+          data-href="{{ url('/addAccommodation') }}"
+          data-page-id="898807462"
           ><svg
             class="u-svg-link"
             preserveAspectRatio="xMidYMin slice"
-            viewBox="0 0 55 55"
+            viewBox="0 0 512 512"
             style=""
           >
             <use
               xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="#svg-6672"
+              xlink:href="#svg-a1ae"
             ></use></svg
           ><svg
             class="u-svg-content"
-            viewBox="0 0 55 55"
+            viewBox="0 0 512 512"
             x="0px"
             y="0px"
-            id="svg-6672"
-            style="enable-background: new 0 0 55 55"
+            id="svg-a1ae"
+            style="enable-background: new 0 0 512 512"
           >
-            <path
-              d="M55,27.5C55,12.337,42.663,0,27.5,0S0,12.337,0,27.5c0,8.009,3.444,15.228,8.926,20.258l-0.026,0.023l0.892,0.752
-	c0.058,0.049,0.121,0.089,0.179,0.137c0.474,0.393,0.965,0.766,1.465,1.127c0.162,0.117,0.324,0.234,0.489,0.348
-	c0.534,0.368,1.082,0.717,1.642,1.048c0.122,0.072,0.245,0.142,0.368,0.212c0.613,0.349,1.239,0.678,1.88,0.98
-	c0.047,0.022,0.095,0.042,0.142,0.064c2.089,0.971,4.319,1.684,6.651,2.105c0.061,0.011,0.122,0.022,0.184,0.033
-	c0.724,0.125,1.456,0.225,2.197,0.292c0.09,0.008,0.18,0.013,0.271,0.021C25.998,54.961,26.744,55,27.5,55
-	c0.749,0,1.488-0.039,2.222-0.098c0.093-0.008,0.186-0.013,0.279-0.021c0.735-0.067,1.461-0.164,2.178-0.287
-	c0.062-0.011,0.125-0.022,0.187-0.034c2.297-0.412,4.495-1.109,6.557-2.055c0.076-0.035,0.153-0.068,0.229-0.104
-	c0.617-0.29,1.22-0.603,1.811-0.936c0.147-0.083,0.293-0.167,0.439-0.253c0.538-0.317,1.067-0.648,1.581-1
-	c0.185-0.126,0.366-0.259,0.549-0.391c0.439-0.316,0.87-0.642,1.289-0.983c0.093-0.075,0.193-0.14,0.284-0.217l0.915-0.764
-	l-0.027-0.023C51.523,42.802,55,35.55,55,27.5z M2,27.5C2,13.439,13.439,2,27.5,2S53,13.439,53,27.5
-	c0,7.577-3.325,14.389-8.589,19.063c-0.294-0.203-0.59-0.385-0.893-0.537l-8.467-4.233c-0.76-0.38-1.232-1.144-1.232-1.993v-2.957
-	c0.196-0.242,0.403-0.516,0.617-0.817c1.096-1.548,1.975-3.27,2.616-5.123c1.267-0.602,2.085-1.864,2.085-3.289v-3.545
-	c0-0.867-0.318-1.708-0.887-2.369v-4.667c0.052-0.52,0.236-3.448-1.883-5.864C34.524,9.065,31.541,8,27.5,8
-	s-7.024,1.065-8.867,3.168c-2.119,2.416-1.935,5.346-1.883,5.864v4.667c-0.568,0.661-0.887,1.502-0.887,2.369v3.545
-	c0,1.101,0.494,2.128,1.34,2.821c0.81,3.173,2.477,5.575,3.093,6.389v2.894c0,0.816-0.445,1.566-1.162,1.958l-7.907,4.313
-	c-0.252,0.137-0.502,0.297-0.752,0.476C5.276,41.792,2,35.022,2,27.5z"
-            ></path></svg
+            <g>
+              <g>
+                <path
+                  d="M256,0C114.833,0,0,114.833,0,256s114.833,256,256,256s256-114.853,256-256S397.167,0,256,0z M256,472.341    c-119.275,0-216.341-97.046-216.341-216.341S136.725,39.659,256,39.659S472.341,136.705,472.341,256S375.295,472.341,256,472.341z    "
+                ></path>
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M355.148,234.386H275.83v-79.318c0-10.946-8.864-19.83-19.83-19.83s-19.83,8.884-19.83,19.83v79.318h-79.318    c-10.966,0-19.83,8.884-19.83,19.83s8.864,19.83,19.83,19.83h79.318v79.318c0,10.946,8.864,19.83,19.83,19.83    s19.83-8.884,19.83-19.83v-79.318h79.318c10.966,0,19.83-8.884,19.83-19.83S366.114,234.386,355.148,234.386z"
+                ></path>
+              </g>
+            </g></svg
         ></span>
-        <h3 class="u-text u-text-default u-text-1">Name 1</h3>
+        <h4 class="u-text u-text-default u-text-1">
+          <a
+            class="
+              u-active-none
+              u-border-none
+              u-btn
+              u-button-link
+              u-button-style
+              u-hover-none
+              u-none
+              u-text-palette-1-base
+              u-btn-1
+            "
+            href="{{ url('/addAccommodation') }}"
+            data-page-id="898807462"
+            >Add Accommodation</a
+          >
+        </h4>
       </div>
     </section>
-
-    <div class="message-area" id="message-area">
-      <!-- <div class="message-box others-message-box">
-				<div class="message others-message"> Hi, How are you? </div>
-				<div class="separator"></div>
-			</div>
-			
-			<div class="message-box my-message-box">
-				<div class="message my-message"> I am good, how are you doing? </div>
-				<div class="separator"></div>
-			</div> -->
-    </div>
-
-    <div class="typing-area">
-      <textarea class="typing-box" id="typing-box"></textarea>
-      <button class="send-button" onclick="sendMessage()">Send</button>
-    </div>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"
-      integrity="sha512-v8ng/uGxkge3d1IJuEo6dJP8JViyvms0cly9pnbfRxT6/31c3dRWxIiwGnMSWwZjHKOuY3EVmijs7k1jz/9bLA=="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      var socket;
-      window.onload = function () {
-        socket = io.connect("http://localhost:3000");
-
-        socket.on("message-from-others", function (message) {
-          var html =
-            '<div class="message-box others-message-box">' +
-            '<div class="message others-message"> ' +
-            message +
-            " </div>" +
-            '<div class="separator"></div>' +
-            "</div>";
-
-          document.getElementById("message-area").innerHTML += html;
-        });
-      };
-
-      function sendMessage() {
-        var message = document.getElementById("typing-box").value;
-        var html =
-          '<div class="message-box my-message-box">' +
-          '<div class="message my-message"> ' +
-          message +
-          " </div>" +
-          '<div class="separator"></div>' +
-          "</div>";
-
-        document.getElementById("message-area").innerHTML += html;
-        document.getElementById("typing-box").value = "";
-
-        socket.emit("codeboard-message", message);
-      }
-    </script>
-    @extends('layouts/footerLayout')
+    @extends('host/layouts/footerLayout')
 
 @section('footer')
   </body>

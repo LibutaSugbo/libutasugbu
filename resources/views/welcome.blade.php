@@ -37,7 +37,7 @@
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
-  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body"><header class="u-clearfix u-custom-color-1 u-header u-sticky u-sticky-9732 u-header" id="sec-aada"><a href="{{ url('/home') }}" class="u-image u-logo u-image-1" data-image-width="497" data-image-height="190">
+  <body data-home-page="{{ url('/home') }}" data-home-page-title="Home" class="u-body"><header class="u-clearfix u-custom-color-1 u-header u-sticky u-sticky-9732 u-header" id="sec-aada"><a href="{{ url('/home') }}" class="u-image u-logo u-image-1" data-image-width="497" data-image-height="190">
         <img src="/img/LOGO.png" class="u-logo-image u-logo-image-1">
       </a><nav class="u-menu u-menu-dropdown u-offcanvas u-offcanvas-shift u-menu-1" data-responsive-from="XS" data-position="Nav">
         <div class="menu-collapse u-custom-font u-font-roboto-slab" style="font-size: 1.25rem; letter-spacing: 0px; text-transform: uppercase;">
@@ -51,7 +51,7 @@
         <div class="u-custom-menu u-nav-container">
           <ul class="u-custom-font u-font-roboto-slab u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-10 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-radius-10 u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="{{ url('/home') }}" style="padding: 10px;">Home</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-10 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-radius-10 u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="{{ url('/login') }}" style="padding: 10px;">Log-in</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-10 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-radius-10 u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="{{ url('/signup') }}"  class="get_result"  style="padding: 10px;">Sign-up</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-10 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-radius-10 u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="{{ url('/su_host_traveler') }}"  class="get_result"  style="padding: 10px;">Sign-up</a>
 </li></ul>
         </div>
         <div class="u-custom-menu u-nav-container-collapse">
@@ -59,8 +59,8 @@
             <div class="u-inner-container-layout u-sidenav-overflow">
               <div class="u-menu-close"></div>
               <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url('/home') }}" style="padding: 10px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/login" style="padding: 10px;">Log-in</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url('/signup') }}" target="_blank" style="padding: 10px;">Sign-up</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url('/login') }}"style="padding: 10px;">Log-in</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url('/su_host_traveler') }}"  style="padding: 10px;">Sign-up</a>
 </li></ul>
             </div>
           </div>
@@ -73,7 +73,7 @@
     <section class="u-clearfix u-white u-section-2" id="sec-e083">
       <div class="u-clearfix u-sheet u-sheet-1"></div>
     </section>
-    @extends('layouts/footerLayout')
+    @extends('host/layouts/footerLayout')
 
 @section('footer')
     

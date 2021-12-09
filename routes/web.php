@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\HostController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\AccommodationController;
 use App\Http\Controllers\RegistrationController;
@@ -21,6 +22,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home', [HostController::class,'home']);
+
+Route::get('/su_host_traveler', [UserController::class,'createsu_host_traveler']);
+Route::get('/store_host', [UserController::class,'storeHost']);
+Route::get('/store_traveler', [UserController::class,'storeTraveler']);
 
 Route::get('/signup', [HostController::class,'create']);
 Route::get('/su-resort', [HostController::class,'createresort']);

@@ -11,42 +11,42 @@ class AccommodationController extends Controller
 {
     public function create(){
 
-        return view('rooms_accommodation.resortNewProfile');
+        return view('host.rooms_accommodation.resortNewProfile');
     }
     public function addAccommodation(){
 
-        return view('rooms_accommodation.addAccommodation');
+        return view('host.rooms_accommodation.addAccommodation');
     }
     public function addPackageDeal(){
 
-        return view('rooms_accommodation.addPackageDeal');
+        return view('host.rooms_accommodation.addPackageDeal');
     }
 
 
 
     public function accountOptions(){
 
-        return view('accountOptions');
+        return view('host.accountOptions');
     }
     public function displayItems(){
 
-        return view('displayItems');
+        return view('host.displayItems');
     }
     public function history(){
 
-        return view('history');
+        return view('host.history');
     }
     public function messages(){
 
-        return view('messages');
+        return view('host.messages');
     }
     public function newProfile(){
 
-        return view('newProfile');
+        return view('host.newProfile');
     }
 
     public function notification(){
 
-        return view('notification');
+        return view('host.notification');
     }
 }

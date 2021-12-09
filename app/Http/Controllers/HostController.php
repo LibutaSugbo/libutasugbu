@@ -22,7 +22,7 @@ class HostController extends Controller
     }
     public function create(){
 
-        return view('registration.signup');
+        return view('host.registration.signup');
     }
     /**
      * Show the form for creating a new resource.
@@ -32,7 +32,7 @@ class HostController extends Controller
     public function createbnb()
     {
         //
-        return view('registration.su-bnb');
+        return view('host.registration.su-bnb');
     }
 
     /**
@@ -59,6 +59,7 @@ class HostController extends Controller
         $host->Host_Password = $request->get('password');
         $host->Host_Type = 'bnb';
         $host->Host_Website = $request->get('Website');
+        $host -> User_Acc_ID;
         $host->save();
         return redirect()->back()->with('status','Host Added Successfully');
        
@@ -236,7 +237,7 @@ class HostController extends Controller
     public function createresort()
     {
         //
-        return view('registration.su-resort');
+        return view('host.registration.su-resort');
     }
 
     /**
@@ -303,7 +304,7 @@ class HostController extends Controller
     public function createresto()
     {
         //
-        return view('registration.su-restoncafe');
+        return view('host.registration.su-restoncafe');
     }
 
     /**
@@ -370,7 +371,7 @@ class HostController extends Controller
     public function createtour()
     {
         //
-        return view('registration.su-tourspot');
+        return view('host.registration.su-tourspot');
     }
 
     /**

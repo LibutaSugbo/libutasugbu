@@ -10,7 +10,7 @@ class SessionController extends Controller
 {
     
     public function create(){
-        return view('session.login');
+        return view('host.session.login');
     }
     public function store(){
         if (auth()->attempt(request(['email', 'password'])) == false) {
