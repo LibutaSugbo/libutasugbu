@@ -275,7 +275,7 @@
           </div>
         </div>
         <a
-          href="{{ url('/store_host') }}"
+          href="{{ url('/signup') }}"
           class="
             u-border-4
             u-border-custom-color-1

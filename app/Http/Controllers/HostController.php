@@ -42,7 +42,7 @@ class HostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function storebnb(Request $request)
-    { 
+    { /*
         $host = new Host;
         $host->Host_BName =  $request->get('b_name');
         $host->Host_LName = $request->get('last_name');
@@ -59,10 +59,29 @@ class HostController extends Controller
         $host->Host_Password = $request->get('password');
         $host->Host_Type = 'bnb';
         $host->Host_Website = $request->get('Website');
-        $host -> User_Acc_ID;
         $host->save();
         return redirect()->back()->with('status','Host Added Successfully');
        
+        */
+        $request->validate([
+            'b_name' => 'required|string|min:3|max:255',
+            'first_name' => 'required|string|min:3|max:255',
+            'last_name' => 'required|string|min:3|max:255',
+            'mid_name' => 'required|string|min:3|max:255',
+            'ext_name' => 'required|string|min:3|max:255',
+			'city_mun' => 'required|string|min:3|max:255',
+            'Barangay' => 'required|string|min:3|max:255',
+            'Street' => 'required|string|min:3|max:255',
+            'address2' => 'required|min:3|max:255',
+            'Tel_Num' => 'required',
+            'Website' => 'min:3',
+			'email' => 'required|string|email|max:255',
+            'password' => 'required|confirmed|min:6',
+            'direction' => 'string|min:3',
+        ]);
+        Host::create($request->all());
+        return redirect()->back()->with('status','Host Added Successfully');
+
         /*
         $rules = [
 			'b_name' => 'required|string|min:3|max:255',
@@ -89,9 +108,6 @@ class HostController extends Controller
 		else{
             $data = $request->input();
 			try{
-                DB::table('host')->insert([
-                    'Host_Type' => 'bnb'
-                ]);
 				$host = new Host;
                 $host->Host_BName = $data['b_name'];
                 $host->Host_LName = $data['last_name'];
@@ -107,6 +123,7 @@ class HostController extends Controller
 				$host->Host_Email = $data['email'];
                 $host->Host_Password = $data['password'];
                 $host->Host_Website = $data['Website'];
+                $host->Host_Type = 'bnb';
 				$host->save();
 				return redirect('su-bnb')->with('status',"Insert successfully");
 			}
