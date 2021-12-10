@@ -72,6 +72,7 @@ class HostController extends Controller
             'Street' => 'required|string|min:3|max:255',
             'zip' => 'required|numeric',
             'Tel_Num' => 'required|numeric',
+			'Host_Email' => 'required|string|email|max:255|unique:host',
             'password' => 'required|confirmed|min:6',
             'direction' => 'string|min:3',
         ]);
