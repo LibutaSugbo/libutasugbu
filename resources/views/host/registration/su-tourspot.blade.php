@@ -80,54 +80,111 @@
     <section class="u-clearfix u-section-2" id="sec-a69b">
       <div class="u-clearfix u-sheet u-valign-top u-sheet-1">
         <div class="signup-form u-align-right u-border-3 u-border-grey-75 u-form u-palette-5-light-3 u-radius-14 u-form-1">
-          <form action="#" method="POST" class="u-clearfix u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;">
-            <div class="u-form-group u-form-name">
-              <label for="name-20d2" class="u-label">Tourist Spot Name</label>
-              <input type="text" placeholder="Tourist Spot Name" id="b_name" name="b_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+          @if(Session::has('success'))
+            <div class="alert alert-success text-center">
+                {{Session::get('success')}}
             </div>
-            <div class="u-form-address u-form-group u-form-group-2">
-              <label for="address-6a68" class="u-label">City/Municipality</label>
-              <input type="text" placeholder="City/Municipality" id="city_mun" name="city_mun" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-            </div>
+        @endif   
+          <form action="{{ url('storeSu_bnb') }}" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">
+          @csrf
+          <div class="u-form-group u-form-name">
+            <label for="name-20d2" class="u-label">Tourist Spot Name</label>
+            <input type="text" placeholder="BnB Name" id="b_name" name="b_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('b_name') is-invalid @enderror" required="required">
+            @error('b_name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+          </div>
             <div class="u-form-address u-form-group u-form-group-3">
-              <label for="address-d999" class="u-label">Barangay</label>
-              <input type="text" placeholder="Barangay" id="address-d999" name="Barangay" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <label for="address-6a68" class="u-label">City/Municipality</label>
+              <input type="text" placeholder="City/Municipality" id="address-6a68" name="city_mun" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('city_mun') is-invalid @enderror" required="required">
+              @error('city_mun')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
             <div class="u-form-address u-form-group u-form-group-4">
-              <label for="address-669e" class="u-label">Street</label>
-              <input type="text" placeholder="Street" id="address-669e" name="Street" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <label for="address-d999" class="u-label">Barangay</label>
+              <input type="text" placeholder="Barangay" id="address-d999" name="Barangay" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('Barangay') is-invalid @enderror" required="required">
+              @error('Barangay')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
             <div class="u-form-address u-form-group u-form-group-5">
+              <label for="address-669e" class="u-label">Street</label>
+              <input type="text" placeholder="Street" id="address-669e" name="Street" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('Street') is-invalid @enderror" required="required">
+              @error('Street')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+            <div class="u-form-address u-form-group u-form-group-6">
               <label for="address-5754" class="u-label">Zipcode</label>
-              <input type="text" placeholder="Zipcode" id="address-5754" name="address2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="Zipcode" id="address-5754" name="zip" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('zip') is-invalid @enderror" required="required">
+              @error('zip')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
-            <div class="u-form-group u-form-phone u-form-group-6">
+            <div class="u-form-group u-form-phone u-form-group-7">
               <label for="phone-b658" class="u-label">Contact Details</label>
-              <input type="tel"  placeholder="Telephone No." id="phone-b658" name="Tel_Num" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-            </div>
-            <div class="u-form-email u-form-group u-form-group-7">
-              <label for="email-6206" class="u-label">Website (optional)</label>
-              <input type="email" placeholder="Website" id="email-6206" name="Website" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+              <input type="tel"  placeholder="Telephone No." id="phone-b658" name="Tel_Num" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('Tel_Num') is-invalid @enderror" required="required">
+              @error('Tel_Num')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
             <div class="u-form-email u-form-group u-form-group-8">
-              <label for="email-51f8" class="u-label">Email</label>
-              <input type="email" placeholder="Enter an email address" id="email name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <label for="email-6206" class="u-label">Website (optional)</label>
+              <input type="text" placeholder="Website" id="email-6206" name="Website" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('Website') is-invalid @enderror">
+              @error('Website')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
-            <div class="u-form-group u-form-group-9">
-              <label for="text-324a" class="u-label">Password</label>
-              <input type="text" placeholder="Enter your password" id="password" name="password" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
+            <div class="u-form-email u-form-group u-form-group-9">
+              <label for="email-51f8" class="u-label">Email</label>
+              <input type="email" placeholder="Enter an email address" id="email" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('email') is-invalid @enderror" required="required">
+              @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
             <div class="u-form-group u-form-group-10">
-              <label for="text-175a" class="u-label">Confirm Password</label>
-              <input type="text" placeholder="Retype your password" id="confirm_pass" name="confirm_pass" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
+              <label for="text-324a" class="u-label">Password</label>
+              <input type="text" placeholder="Enter your password" id="password" name="password" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('password') is-invalid @enderror" required="required">
+              @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
+            <div class="u-form-group u-form-group-11">
+              <label for="text-175a" class="u-label">Confirm Password</label>
+              <input type="text" placeholder="Retype your password" id="password" name="password_confirmation" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('password') is-invalid @enderror" required="required">
+            </div>
+            
             <div class="u-form-group u-form-textarea u-form-group-12">
               <label for="textarea-504d" class="u-label">Directions of the Place (Landmarks)</label>
-              <textarea rows="4" cols="50" id="textarea-504d" name="direction" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Directions of the Place (You may include landmarks)"></textarea>
+              <textarea rows="4" cols="50" id="textarea-504d" name="direction" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('direction') is-invalid @enderror" placeholder="Directions of the Place (You may include landmarks)"></textarea>
+              @error('direction')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
             <div class="u-align-center u-form-group u-form-submit">
-              <a href="#" class="u-border-2 u-border-black u-btn u-btn-round u-btn-submit u-button-style u-hover-black u-none u-radius-12 u-text-black u-text-hover-white u-btn-1">Submit</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
+              <a href="{{ url('/su-bnb') }}" class="u-border-2 u-border-black u-btn u-btn-round u-btn-submit u-button-style u-hover-black u-none u-radius-12 u-text-black u-text-hover-white u-btn-1">Submit</a>
+              <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>

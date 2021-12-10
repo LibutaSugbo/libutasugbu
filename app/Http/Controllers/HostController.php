@@ -52,7 +52,7 @@ class HostController extends Controller
         $host->Host_City_Muni = $request->get('city_mun');
         $host->Host_Brgy =$request->get('Barangay'); 
         $host->Host_Street = $request->get('Street');
-        $host->Host_ZIP = $request->get('address2');
+        $host->Host_ZIP = $request->get('zip');
         $host->Host_ContactNum = $request->get('Tel_Num');
         $host->Host_Direction = $request->get('direction');
         $host->Host_Email = $request->get('email');
@@ -63,24 +63,40 @@ class HostController extends Controller
         return redirect()->back()->with('status','Host Added Successfully');
        
         */
-        $request->validate([
+        $this->validate($request, [
             'b_name' => 'required|string|min:3|max:255',
             'first_name' => 'required|string|min:3|max:255',
             'last_name' => 'required|string|min:3|max:255',
-            'mid_name' => 'required|string|min:3|max:255',
-            'ext_name' => 'required|string|min:3|max:255',
+            'mid_name' => 'string|min:3|max:255',
+            'ext_name' => 'string|min:2|max:255',
 			'city_mun' => 'required|string|min:3|max:255',
             'Barangay' => 'required|string|min:3|max:255',
             'Street' => 'required|string|min:3|max:255',
-            'address2' => 'required|min:3|max:255',
-            'Tel_Num' => 'required',
+            'zip' => 'required|numeric',
+            'Tel_Num' => 'required|numeric',
             'Website' => 'min:3',
 			'email' => 'required|string|email|max:255',
             'password' => 'required|confirmed|min:6',
             'direction' => 'string|min:3',
         ]);
-        Host::create($request->all());
-        return redirect()->back()->with('status','Host Added Successfully');
+        $host = new Host;
+        $host->Host_BName =  $request->get('b_name');
+        $host->Host_LName = $request->get('last_name');
+        $host->Host_FName = $request->get('first_name');
+        $host->Host_MName = $request->get('mid_name');
+        $host->Host_ExtName = $request->get('ext_name');
+        $host->Host_City_Muni = $request->get('city_mun');
+        $host->Host_Brgy =$request->get('Barangay'); 
+        $host->Host_Street = $request->get('Street');
+        $host->Host_ZIP = $request->get('zip');
+        $host->Host_ContactNum = $request->get('Tel_Num');
+        $host->Host_Direction = $request->get('direction');
+        $host->Host_Email = $request->get('email');
+        $host->Host_Password = $request->get('password');
+        $host->Host_Type = 'bnb';
+        $host->Host_Website = $request->get('Website');
+        $host->save();
+        return back()->with('status','BnB Added Successfully');
 
         /*
         $rules = [
@@ -92,7 +108,7 @@ class HostController extends Controller
 			'city_mun' => 'required|string|min:3|max:255',
             'Barangay' => 'required|string|min:3|max:255',
             'Street' => 'required|string|min:3|max:255',
-            'address2' => 'required|min:3|max:255',
+            'zip' => 'required|min:3|max:255',
             'Tel_Num' => 'required',
             'Website' => 'min:3',
 			'email' => 'required|string|email|max:255',
@@ -117,7 +133,7 @@ class HostController extends Controller
                 $host->Host_City_Muni = $data['city_mun'];
                 $host->Host_Brgy = $data['Barangay'];
                 $host->Host_Street = $data['Street'];
-                $host->Host_ZIP = $data['address2'];
+                $host->Host_ZIP = $data['zip'];
                 $host->Host_ContactNum = $data['Tel_Num'];
 				$host->Host_Direction = $data['direction'];
 				$host->Host_Email = $data['email'];
@@ -198,7 +214,40 @@ class HostController extends Controller
      */
     public function storerentalv(Request $request)
     {
-        //
+        $this->validate($request, [
+            'b_name' => 'required|string|min:3|max:255',
+            'first_name' => 'required|string|min:3|max:255',
+            'last_name' => 'required|string|min:3|max:255',
+            'mid_name' => 'string|min:3|max:255',
+            'ext_name' => 'string|min:2|max:255',
+			'city_mun' => 'required|string|min:3|max:255',
+            'Barangay' => 'required|string|min:3|max:255',
+            'Street' => 'required|string|min:3|max:255',
+            'zip' => 'required|numeric',
+            'Tel_Num' => 'required|numeric',
+            'Website' => 'min:3',
+			'email' => 'required|string|email|max:255',
+            'password' => 'required|confirmed|min:6',
+            'direction' => 'string|min:3',
+        ]);
+        $host = new Host;
+        $host->Host_BName =  $request->get('b_name');
+        $host->Host_LName = $request->get('last_name');
+        $host->Host_FName = $request->get('first_name');
+        $host->Host_MName = $request->get('mid_name');
+        $host->Host_ExtName = $request->get('ext_name');
+        $host->Host_City_Muni = $request->get('city_mun');
+        $host->Host_Brgy =$request->get('Barangay'); 
+        $host->Host_Street = $request->get('Street');
+        $host->Host_ZIP = $request->get('zip');
+        $host->Host_ContactNum = $request->get('Tel_Num');
+        $host->Host_Direction = $request->get('direction');
+        $host->Host_Email = $request->get('email');
+        $host->Host_Password = $request->get('password');
+        $host->Host_Type = 'rental vehicle';
+        $host->Host_Website = $request->get('Website');
+        $host->save();
+        return back()->with('status','Rental Vehicle Business Added Successfully');
     }
 
     /**
@@ -265,7 +314,40 @@ class HostController extends Controller
      */
     public function storeresort(Request $request)
     {
-        //
+        $this->validate($request, [
+            'b_name' => 'required|string|min:3|max:255',
+            'first_name' => 'required|string|min:3|max:255',
+            'last_name' => 'required|string|min:3|max:255',
+            'mid_name' => 'string|min:3|max:255',
+            'ext_name' => 'string|min:2|max:255',
+			'city_mun' => 'required|string|min:3|max:255',
+            'Barangay' => 'required|string|min:3|max:255',
+            'Street' => 'required|string|min:3|max:255',
+            'zip' => 'required|numeric',
+            'Tel_Num' => 'required|numeric',
+            'Website' => 'min:3',
+			'email' => 'required|string|email|max:255',
+            'password' => 'required|confirmed|min:6',
+            'direction' => 'string|min:3',
+        ]);
+        $host = new Host;
+        $host->Host_BName =  $request->get('b_name');
+        $host->Host_LName = $request->get('last_name');
+        $host->Host_FName = $request->get('first_name');
+        $host->Host_MName = $request->get('mid_name');
+        $host->Host_ExtName = $request->get('ext_name');
+        $host->Host_City_Muni = $request->get('city_mun');
+        $host->Host_Brgy =$request->get('Barangay'); 
+        $host->Host_Street = $request->get('Street');
+        $host->Host_ZIP = $request->get('zip');
+        $host->Host_ContactNum = $request->get('Tel_Num');
+        $host->Host_Direction = $request->get('direction');
+        $host->Host_Email = $request->get('email');
+        $host->Host_Password = $request->get('password');
+        $host->Host_Type = 'resort';
+        $host->Host_Website = $request->get('Website');
+        $host->save();
+        return back()->with('status','Resort Added Successfully');
     }
 
     /**
@@ -332,7 +414,40 @@ class HostController extends Controller
      */
     public function storeresto(Request $request)
     {
-        //
+        $this->validate($request, [
+            'b_name' => 'required|string|min:3|max:255',
+            'first_name' => 'required|string|min:3|max:255',
+            'last_name' => 'required|string|min:3|max:255',
+            'mid_name' => 'string|min:3|max:255',
+            'ext_name' => 'string|min:2|max:255',
+			'city_mun' => 'required|string|min:3|max:255',
+            'Barangay' => 'required|string|min:3|max:255',
+            'Street' => 'required|string|min:3|max:255',
+            'zip' => 'required|numeric',
+            'Tel_Num' => 'required|numeric',
+            'Website' => 'min:3',
+			'email' => 'required|string|email|max:255',
+            'password' => 'required|confirmed|min:6',
+            'direction' => 'string|min:3',
+        ]);
+        $host = new Host;
+        $host->Host_BName =  $request->get('b_name');
+        $host->Host_LName = $request->get('last_name');
+        $host->Host_FName = $request->get('first_name');
+        $host->Host_MName = $request->get('mid_name');
+        $host->Host_ExtName = $request->get('ext_name');
+        $host->Host_City_Muni = $request->get('city_mun');
+        $host->Host_Brgy =$request->get('Barangay'); 
+        $host->Host_Street = $request->get('Street');
+        $host->Host_ZIP = $request->get('zip');
+        $host->Host_ContactNum = $request->get('Tel_Num');
+        $host->Host_Direction = $request->get('direction');
+        $host->Host_Email = $request->get('email');
+        $host->Host_Password = $request->get('password');
+        $host->Host_Type = 'resto';
+        $host->Host_Website = $request->get('Website');
+        $host->save();
+        return back()->with('status','Resto/Cafe Added Successfully');
     }
 
     /**
@@ -399,7 +514,32 @@ class HostController extends Controller
      */
     public function storetour(Request $request)
     {
-        //
+        $this->validate($request, [
+            'b_name' => 'required|string|min:3|max:255',
+			'city_mun' => 'required|string|min:3|max:255',
+            'Barangay' => 'required|string|min:3|max:255',
+            'Street' => 'required|string|min:3|max:255',
+            'zip' => 'required|numeric',
+            'Tel_Num' => 'required|numeric',
+            'Website' => 'min:3',
+			'email' => 'required|string|email|max:255',
+            'password' => 'required|confirmed|min:6',
+            'direction' => 'string|min:3',
+        ]);
+        $host = new Host;
+        $host->Host_BName =  $request->get('b_name');
+        $host->Host_City_Muni = $request->get('city_mun');
+        $host->Host_Brgy =$request->get('Barangay'); 
+        $host->Host_Street = $request->get('Street');
+        $host->Host_ZIP = $request->get('zip');
+        $host->Host_ContactNum = $request->get('Tel_Num');
+        $host->Host_Direction = $request->get('direction');
+        $host->Host_Email = $request->get('email');
+        $host->Host_Password = $request->get('password');
+        $host->Host_Type = 'tourist spot';
+        $host->Host_Website = $request->get('Website');
+        $host->save();
+        return back()->with('status','Tourist Spot Added Successfully');
     }
 
     /**
