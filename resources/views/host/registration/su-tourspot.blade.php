@@ -152,8 +152,8 @@
             </div>
             <div class="u-form-email u-form-group u-form-group-9">
               <label for="email-51f8" class="u-label">Email</label>
-              <input type="email" placeholder="Enter an email address" id="email" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('email') is-invalid @enderror" required="required">
-              @error('email')
+              <input type="email" placeholder="Enter an email address" id="Host_Email" name="Host_Email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-control @error('Host_Email') is-invalid @enderror" required="required">
+              @error('Host_Email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>

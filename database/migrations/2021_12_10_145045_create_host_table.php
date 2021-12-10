@@ -18,8 +18,8 @@ class CreateHostTable extends Migration
             $table->string('Host_BName', 300);
             $table->string('Host_LName', 50);
             $table->string('Host_FName', 50);
-            $table->string('Host_MName', 50);
-            $table->string('Host_ExtName', 300);
+            $table->string('Host_MName', 50)->nullable();
+            $table->string('Host_ExtName', 300)->nullable();
             $table->string('Host_City_Muni', 50);
             $table->string('Host_Brgy', 50);
             $table->string('Host_Street', 50);
@@ -29,7 +29,7 @@ class CreateHostTable extends Migration
             $table->string('Host_Email', 50);
             $table->string('Host_Password', 50);
             $table->string('Host_Type', 50);
-            $table->string('Host_Website', 50);
+            $table->string('Host_Website', 50)->nullable();
         });
     }
 

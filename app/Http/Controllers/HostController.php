@@ -67,15 +67,11 @@ class HostController extends Controller
             'b_name' => 'required|string|min:3|max:255',
             'first_name' => 'required|string|min:3|max:255',
             'last_name' => 'required|string|min:3|max:255',
-            'mid_name' => 'string|min:3|max:255',
-            'ext_name' => 'string|min:2|max:255',
 			'city_mun' => 'required|string|min:3|max:255',
             'Barangay' => 'required|string|min:3|max:255',
             'Street' => 'required|string|min:3|max:255',
             'zip' => 'required|numeric',
             'Tel_Num' => 'required|numeric',
-            'Website' => 'min:3',
-			'email' => 'required|string|email|max:255',
             'password' => 'required|confirmed|min:6',
             'direction' => 'string|min:3',
         ]);
@@ -91,7 +87,7 @@ class HostController extends Controller
         $host->Host_ZIP = $request->get('zip');
         $host->Host_ContactNum = $request->get('Tel_Num');
         $host->Host_Direction = $request->get('direction');
-        $host->Host_Email = $request->get('email');
+        $host->Host_Email = $request->get('Host_Email');
         $host->Host_Password = $request->get('password');
         $host->Host_Type = 'bnb';
         $host->Host_Website = $request->get('Website');
@@ -226,7 +222,7 @@ class HostController extends Controller
             'zip' => 'required|numeric',
             'Tel_Num' => 'required|numeric',
             'Website' => 'min:3',
-			'email' => 'required|string|email|max:255',
+			'Host_Email' => 'required|string|email|max:255|unique:host',
             'password' => 'required|confirmed|min:6',
             'direction' => 'string|min:3',
         ]);
@@ -242,7 +238,7 @@ class HostController extends Controller
         $host->Host_ZIP = $request->get('zip');
         $host->Host_ContactNum = $request->get('Tel_Num');
         $host->Host_Direction = $request->get('direction');
-        $host->Host_Email = $request->get('email');
+        $host->Host_Email = $request->get('Host_Email');
         $host->Host_Password = $request->get('password');
         $host->Host_Type = 'rental vehicle';
         $host->Host_Website = $request->get('Website');
@@ -326,7 +322,7 @@ class HostController extends Controller
             'zip' => 'required|numeric',
             'Tel_Num' => 'required|numeric',
             'Website' => 'min:3',
-			'email' => 'required|string|email|max:255',
+			'Host_Email' => 'required|string|email|max:255|unique:host',
             'password' => 'required|confirmed|min:6',
             'direction' => 'string|min:3',
         ]);
@@ -342,7 +338,7 @@ class HostController extends Controller
         $host->Host_ZIP = $request->get('zip');
         $host->Host_ContactNum = $request->get('Tel_Num');
         $host->Host_Direction = $request->get('direction');
-        $host->Host_Email = $request->get('email');
+        $host->Host_Email = $request->get('Host_Email');
         $host->Host_Password = $request->get('password');
         $host->Host_Type = 'resort';
         $host->Host_Website = $request->get('Website');
@@ -426,7 +422,7 @@ class HostController extends Controller
             'zip' => 'required|numeric',
             'Tel_Num' => 'required|numeric',
             'Website' => 'min:3',
-			'email' => 'required|string|email|max:255',
+			'Host_Email' => 'required|string|email|max:255|unique:host',
             'password' => 'required|confirmed|min:6',
             'direction' => 'string|min:3',
         ]);
@@ -442,7 +438,7 @@ class HostController extends Controller
         $host->Host_ZIP = $request->get('zip');
         $host->Host_ContactNum = $request->get('Tel_Num');
         $host->Host_Direction = $request->get('direction');
-        $host->Host_Email = $request->get('email');
+        $host->Host_Email = $request->get('Host_Email');
         $host->Host_Password = $request->get('password');
         $host->Host_Type = 'resto';
         $host->Host_Website = $request->get('Website');
@@ -522,7 +518,7 @@ class HostController extends Controller
             'zip' => 'required|numeric',
             'Tel_Num' => 'required|numeric',
             'Website' => 'min:3',
-			'email' => 'required|string|email|max:255',
+			'Host_Email' => 'required|string|email|max:255|unique:host',
             'password' => 'required|confirmed|min:6',
             'direction' => 'string|min:3',
         ]);
@@ -534,7 +530,7 @@ class HostController extends Controller
         $host->Host_ZIP = $request->get('zip');
         $host->Host_ContactNum = $request->get('Tel_Num');
         $host->Host_Direction = $request->get('direction');
-        $host->Host_Email = $request->get('email');
+        $host->Host_Email = $request->get('Host_Email');
         $host->Host_Password = $request->get('password');
         $host->Host_Type = 'tourist spot';
         $host->Host_Website = $request->get('Website');
