@@ -85,7 +85,7 @@
                 {{Session::get('success')}}
             </div>
         @endif   
-          <form action="{{ url('storeSu_bnb') }}" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">
+          <form action="{{ url('storetour') }}" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">
           @csrf
           <div class="u-form-group u-form-name">
             <label for="name-20d2" class="u-label">Tourist Spot Name</label>
