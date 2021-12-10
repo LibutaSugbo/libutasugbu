@@ -77,7 +77,7 @@
           </li>
           <li class="u-nav-item"><a
               class="u-border-2 u-border-active-white u-border-hover-grey-10 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-radius-10 u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
-              href="{{ url('/signup') }}"  style="padding: 10px;">Sign-up</a>
+              href="{{ url('/su_host_traveler') }}"  style="padding: 10px;">Sign-up</a>
           </li>
         </ul>
       </div>
@@ -92,7 +92,7 @@
               <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url('/login') }}"
                   style="padding: 10px;">Log-in</a>
               </li>
-              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url('/signup') }}" 
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url('/su_host_traveler') }}" 
                   style="padding: 10px;">Sign-up</a>
               </li>
             </ul>
@@ -108,12 +108,13 @@
         <div class="u-container-layout u-valign-middle u-container-layout-1">
           <h3 class="u-text u-text-default u-text-1">Log in</h3>
           <div class="u-expanded-width u-form u-login-control u-form-1">
-            <form action="#" method="POST"
+            <form action="{{ url('loginstore') }}" method="POST"
               class="u-clearfix u-form-custom-backend u-form-spacing-35 u-form-vertical u-inner-form" source="custom"
               name="form-2" style="padding: 10px;">
+              @csrf
               <div class="u-form-group u-form-name">
                 <label for="username-708d" class="u-form-control-hidden u-label"></label>
-                <input type="text" placeholder="Enter your email" id="username" name="username"
+                <input type="text" placeholder="Enter your email" id="Host_Email" name="Host_Email"
                   class="u-grey-5 u-input u-input-rectangle" required="">
               </div>
               <div class="u-form-group u-form-password">
@@ -126,7 +127,7 @@
                 <label for="checkbox-708d" class="u-label">Remember me</label>
               </div>
               <div class="u-align-center u-form-group u-form-submit">
-                <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-17 u-btn-1">Login</a>
+                <a href="{{ url('/verification') }}" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-17 u-btn-1">Login</a>
                 <input type="submit" value="submit" class="u-form-control-hidden">
               </div>
               <input type="hidden" value="" name="recaptchaResponse">

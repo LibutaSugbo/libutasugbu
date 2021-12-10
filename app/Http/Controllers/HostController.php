@@ -93,7 +93,8 @@ class HostController extends Controller
         $host->Host_Type = 'bnb';
         $host->Host_Website = $request->get('Website');
         $host->save();
-        return back()->with('status','BnB Added Successfully');
+        session()->flash('success','Your account has been created,');
+        return redirect('login');
 
         /*
         $rules = [

@@ -25,25 +25,25 @@ Route::get('/su_host_traveler', function () {
     return view('su_host_traveler');
 });
 
-Route::get('/signup', [HostController::class,'create']);
-Route::get('/su-resort', [HostController::class,'createresort']);
-Route::post('/storeSu_resort', [HostController::class,'storeresort']);
-Route::get('/su-bnb', [HostController::class,'createbnb']);
-Route::post('/storeSu_bnb', [HostController::class,'storebnb']);
-Route::get('/su-rentalvehicles', [HostController::class,'createrentalv']);
-Route::post('/storeSu_rentalvehicles', [HostController::class,'storerentalv']);
-Route::get('/su-restoncafe', [HostController::class,'createresto']);
-Route::post('/storeSu_restoncafe', [HostController::class,'postresto']);
-Route::get('/su-tourspot', [HostController::class,'createtour']);
-Route::post('/storeSu_tourspot', [HostController::class,'storetour']);
+Route::get('/signup', [HostController::class,'create'])->middleware('guest');
+Route::get('/su-resort', [HostController::class,'createresort'])->middleware('guest');
+Route::post('/storeSu_resort', [HostController::class,'storeresort'])->middleware('guest');
+Route::get('/su-bnb', [HostController::class,'createbnb'])->middleware('guest');
+Route::post('/storeSu_bnb', [HostController::class,'storebnb'])->middleware('guest');
+Route::get('/su-rentalvehicles', [HostController::class,'createrentalv'])->middleware('guest');
+Route::post('/storeSu_rentalvehicles', [HostController::class,'storerentalv'])->middleware('guest');
+Route::get('/su-restoncafe', [HostController::class,'createresto'])->middleware('guest');
+Route::post('/storeSu_restoncafe', [HostController::class,'postresto'])->middleware('guest');
+Route::get('/su-tourspot', [HostController::class,'createtour'])->middleware('guest');
+Route::post('/storeSu_tourspot', [HostController::class,'storetour'])->middleware('guest');
 
 
 Route::get('/verification', [RegistrationController::class,'verification']);
 Route::get('/subscription', [RegistrationController::class,'subscription']);
 
-Route::get('/login', [SessionController::class,'create']);
-Route::post('/login', [SessionController::class,'store']);
-Route::get('/logout', [SessionController::class,'destroy']);
+Route::get('/login', [SessionController::class,'create'])->middleware('guest');
+Route::post('/loginstore', [SessionController::class,'loginstore']);
+Route::get('/logout', [SessionController::class,'destroy'])->middleware('auth');
 
 
 Route::get('/resortNewProfile', [AccommodationController::class,'create']);

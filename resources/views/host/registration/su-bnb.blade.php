@@ -81,9 +81,9 @@
     <section class="u-clearfix u-section-2" id="sec-47c9">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="signup-form u-align-right u-border-3 u-border-grey-75 u-form u-palette-5-light-3 u-radius-14 u-form-1">
-          @if(Session::has('success'))
+          @if(session()->has('success'))
             <div class="alert alert-success text-center">
-                {{Session::get('success')}}
+                <p>{{session('success')}}<p>
             </div>
         @endif   
           <form action="{{ url('storeSu_bnb') }}" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">

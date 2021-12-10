@@ -51,7 +51,9 @@
         <div class="u-custom-menu u-nav-container">
           <ul class="u-custom-font u-font-roboto-slab u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-10 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-radius-10 u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="{{ url('/home') }}" style="padding: 10px;">Home</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-10 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-radius-10 u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="{{ url('/login') }}" style="padding: 10px;">Log-in</a>
+  @guest
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-10 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-radius-10 u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="{{ url('/su_host_traveler') }}"  class="get_result"  style="padding: 10px;">Sign-up</a>
+@endguest
 </li></ul>
         </div>
         <div class="u-custom-menu u-nav-container-collapse">

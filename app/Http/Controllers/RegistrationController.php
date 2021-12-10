@@ -79,10 +79,10 @@ class RegistrationController extends Controller
 
     
     public function subscription(){
-        return view('subscription');
+        return view('host.subscription');
     }
     public function verification(){
-        return view('verification');
+        return view('host.verification');
     }
     public function page2(){
         return view('registration.page2');
