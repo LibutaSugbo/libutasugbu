@@ -111,23 +111,30 @@
             <form action="{{ url('loginstore') }}" method="POST"
               class="u-clearfix u-form-custom-backend u-form-spacing-35 u-form-vertical u-inner-form" source="custom"
               name="form-2" style="padding: 10px;">
+              @if(Session::get('fail'))
+                <div class="alert alert-danger">
+                    {{Session::get('fail')}}
+                </div>
+              @endif
               @csrf
               <div class="u-form-group u-form-name">
                 <label for="username-708d" class="u-form-control-hidden u-label"></label>
-                <input type="text" placeholder="Enter your email" id="Host_Email" name="Host_Email"
+                <input type="text" placeholder="Enter your email" id="Host_Email" name="Host_Email" value="{{old('Host_Email')}}"
                   class="u-grey-5 u-input u-input-rectangle" required="">
+                  <span class="text-danger">@error('Host_Email'){{$message}}@enderror</span>
               </div>
               <div class="u-form-group u-form-password">
                 <label for="password-708d" class="u-form-control-hidden u-label"></label>
-                <input type="text" placeholder="Enter your Password" id="password" name="password"
+                <input type="text" placeholder="Enter your Password" id="password" name="password" value="{{old('password')}}"
                   class="u-grey-5 u-input u-input-rectangle" required="">
+                  <span class="text-danger">@error('password'){{$message}}@enderror</span>
               </div>
               <div class="u-form-checkbox u-form-group">
                 <input type="checkbox" id="checkbox-708d" name="remember" value="On">
                 <label for="checkbox-708d" class="u-label">Remember me</label>
               </div>
               <div class="u-align-center u-form-group u-form-submit">
-                <a href="{{ url('/verification') }}" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-17 u-btn-1">Login</a>
+                <a href="{{ url('/newProfile') }}" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-17 u-btn-1">Login</a>
                 <input type="submit" value="submit" class="u-form-control-hidden">
               </div>
               <input type="hidden" value="" name="recaptchaResponse">
@@ -136,6 +143,7 @@
           <a href=""
             class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-2">Forgot
             password?</a>
+          <a href ="{{ url ('/su_host_traveler')}}" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-2">Create new Account</a>
         </div>
       </div>
     </div>

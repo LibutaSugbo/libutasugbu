@@ -296,7 +296,7 @@
             {{Session::get('success')}}
         </div>
     @endif   
-      <form action="{{ url('storeresto') }}" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">
+      <form action="{{ url('storeSu_restoncafe') }}" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">
       @csrf
       <div class="u-form-group u-form-name">
         <label for="name-20d2" class="u-label">Resto/Cafe Name</label>

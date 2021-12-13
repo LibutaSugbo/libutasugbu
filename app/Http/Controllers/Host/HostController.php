@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Host;
 
 use App\Models\Host;
 use App\Http\Controllers\Controller;
@@ -10,6 +10,7 @@ use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Support\Facades\Validator; 
 
+use Auth;
 class HostController extends Controller
 {
     /**
@@ -94,7 +95,7 @@ class HostController extends Controller
         $host->Host_Website = $request->get('Website');
         $host->save();
         session()->flash('success','Your account has been created,');
-        return redirect('login');
+        return redirect('login')->with('status','BnB Business Added Successfully');
 
         /*
         $rules = [
@@ -201,7 +202,7 @@ class HostController extends Controller
     public function createrentalv()
     {
         //
-        return view('registration.su-rentalvehicles');
+        return view('host.registration.su-rentalvehicles');
     }
 
     /**
@@ -216,14 +217,11 @@ class HostController extends Controller
             'b_name' => 'required|string|min:3|max:255',
             'first_name' => 'required|string|min:3|max:255',
             'last_name' => 'required|string|min:3|max:255',
-            'mid_name' => 'string|min:3|max:255',
-            'ext_name' => 'string|min:2|max:255',
 			'city_mun' => 'required|string|min:3|max:255',
             'Barangay' => 'required|string|min:3|max:255',
             'Street' => 'required|string|min:3|max:255',
             'zip' => 'required|numeric',
             'Tel_Num' => 'required|numeric',
-            'Website' => 'min:3',
 			'Host_Email' => 'required|string|email|max:255|unique:host',
             'password' => 'required|confirmed|min:6',
             'direction' => 'string|min:3',
@@ -245,7 +243,9 @@ class HostController extends Controller
         $host->Host_Type = 'rental vehicle';
         $host->Host_Website = $request->get('Website');
         $host->save();
-        return back()->with('status','Rental Vehicle Business Added Successfully');
+        //session()->flash('success','Your account has been created,');
+        return redirect('login')->with('status','Rental Vehicle Business Added Successfully');
+        
     }
 
     /**
@@ -316,14 +316,11 @@ class HostController extends Controller
             'b_name' => 'required|string|min:3|max:255',
             'first_name' => 'required|string|min:3|max:255',
             'last_name' => 'required|string|min:3|max:255',
-            'mid_name' => 'string|min:3|max:255',
-            'ext_name' => 'string|min:2|max:255',
 			'city_mun' => 'required|string|min:3|max:255',
             'Barangay' => 'required|string|min:3|max:255',
             'Street' => 'required|string|min:3|max:255',
             'zip' => 'required|numeric',
             'Tel_Num' => 'required|numeric',
-            'Website' => 'min:3',
 			'Host_Email' => 'required|string|email|max:255|unique:host',
             'password' => 'required|confirmed|min:6',
             'direction' => 'string|min:3',
@@ -345,7 +342,7 @@ class HostController extends Controller
         $host->Host_Type = 'resort';
         $host->Host_Website = $request->get('Website');
         $host->save();
-        return back()->with('status','Resort Added Successfully');
+        return redirect('login')->with('status','Resort Added Successfully');
     }
 
     /**
@@ -416,14 +413,11 @@ class HostController extends Controller
             'b_name' => 'required|string|min:3|max:255',
             'first_name' => 'required|string|min:3|max:255',
             'last_name' => 'required|string|min:3|max:255',
-            'mid_name' => 'string|min:3|max:255',
-            'ext_name' => 'string|min:2|max:255',
 			'city_mun' => 'required|string|min:3|max:255',
             'Barangay' => 'required|string|min:3|max:255',
             'Street' => 'required|string|min:3|max:255',
             'zip' => 'required|numeric',
             'Tel_Num' => 'required|numeric',
-            'Website' => 'min:3',
 			'Host_Email' => 'required|string|email|max:255|unique:host',
             'password' => 'required|confirmed|min:6',
             'direction' => 'string|min:3',
@@ -445,7 +439,7 @@ class HostController extends Controller
         $host->Host_Type = 'resto';
         $host->Host_Website = $request->get('Website');
         $host->save();
-        return back()->with('status','Resto/Cafe Added Successfully');
+        return redirect('login')->with('status','Resto/Cafe Added Successfully');
     }
 
     /**
@@ -519,7 +513,6 @@ class HostController extends Controller
             'Street' => 'required|string|min:3|max:255',
             'zip' => 'required|numeric',
             'Tel_Num' => 'required|numeric',
-            'Website' => 'min:3',
 			'Host_Email' => 'required|string|email|max:255|unique:host',
             'password' => 'required|confirmed|min:6',
             'direction' => 'string|min:3',
@@ -537,7 +530,7 @@ class HostController extends Controller
         $host->Host_Type = 'tourist spot';
         $host->Host_Website = $request->get('Website');
         $host->save();
-        return back()->with('status','Tourist Spot Added Successfully');
+        return redirect('login')->with('status','Tourist Spot Added Successfully');
     }
 
     /**
@@ -583,5 +576,12 @@ class HostController extends Controller
     public function destroytour($id)
     {
         //
+    }
+
+    public function subscription(){
+        return view('host.subscription');
+    }
+    public function verification(){
+        return view('host.verification');
     }
 }

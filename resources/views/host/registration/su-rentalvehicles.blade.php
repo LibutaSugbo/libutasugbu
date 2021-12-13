@@ -87,7 +87,7 @@
                 {{Session::get('success')}}
             </div>
         @endif   
-          <form action="{{ url('storerentalv') }}" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">
+          <form action="{{ url('storeSu_rentalvehicles') }}" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-5 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 36px;" redirect="true">
           @csrf
           <div class="u-form-group u-form-name">
             <label for="name-20d2" class="u-label">Rental Vehicle Business Name</label>
@@ -221,7 +221,7 @@
                 @enderror
             </div>
             <div class="u-align-center u-form-group u-form-submit">
-              <a href="{{ url('/su-bnb') }}" class="u-border-2 u-border-black u-btn u-btn-round u-btn-submit u-button-style u-hover-black u-none u-radius-12 u-text-black u-text-hover-white u-btn-1">Submit</a>
+              <a href="{{ url('/su-rentalvehicles') }}" class="u-border-2 u-border-black u-btn u-btn-round u-btn-submit u-button-style u-hover-black u-none u-radius-12 u-text-black u-text-hover-white u-btn-1">Submit</a>
               <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
