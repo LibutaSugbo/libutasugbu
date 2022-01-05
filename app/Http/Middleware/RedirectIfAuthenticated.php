@@ -23,8 +23,17 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
+                if($guard === 'host'){
+                    return redirect()->route('host.newProfile');
+                }/*
+                if($guard === 'traveler'){
+                    return redirect()->route('traveler.home');
+                }
+                return redirect()->route('user.home');
+                // return redirect(RouteServiceProvider::HOME);
+            
                 return redirect()->route('host.newProfile');
-                //return redirect(RouteServiceProvider::HOME);
+                */
             }
         }
 
