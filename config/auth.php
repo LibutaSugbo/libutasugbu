@@ -17,6 +17,10 @@ return [
         'guard' => 'web',
         'passwords' => 'host',
     ],
+    'host'=>[
+        'driver'=>'eloquent',
+        'model'=>App\Models\Host::class,
+    ],
     'traveler'=>[
         'driver'=>'eloquent',
         'model'=>App\Models\Traveler::class,
@@ -43,6 +47,10 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
+            'provider' => 'host',
+        ],
+        'host'=>[
+            'driver'=>'session',
             'provider' => 'host',
         ],
         'traveler'=>[
@@ -102,10 +110,8 @@ return [
 
     'passwords' => [
         'host' => [
-            'provider' => 'host',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
+            'driver'=>'eloquent',
+            'model'=>App\Models\Host::class,
         ],
         'traveler' => [
             'driver'=>'eloquent',

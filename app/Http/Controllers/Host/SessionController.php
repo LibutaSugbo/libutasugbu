@@ -25,11 +25,13 @@ class SessionController extends Controller
         $attributes = request()->validate([
             'Host_Email' => 'required|email|exists:host,Host_Email',
             'password' => 'required|min:6'
+        ],[
+            'Host_Email.exists'=>'This email does not exist'
         ]);
         
         $creds= $request->only('Host_Email','password');
-        if(Auth::attempt($creds) ){
-            return redirect('newProfile');
+        if(Auth::guard('host')->attempt($creds) ){
+            return redirect('session.newProfile');
         }else{
             return back()->with('fail','Incorrect credentials');
         }
