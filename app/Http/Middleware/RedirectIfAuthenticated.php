@@ -23,9 +23,12 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                if($guard === 'host'){
+                if ($guard === 'host') {
                     return redirect()->route('host.newProfile');
-                }/*
+                }
+
+                //return redirect(RouteServiceProvider::HOME);
+                /*
                 if($guard === 'traveler'){
                     return redirect()->route('traveler.home');
                 }

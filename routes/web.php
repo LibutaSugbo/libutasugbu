@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Host\HostController;
 use App\Http\Controllers\Host\SessionController;
 use App\Http\Controllers\Host\AccommodationController;
-
+//require __DIR__ . '\host.php';
 Route::get('/', function () {
     return view('welcome');
 });

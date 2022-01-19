@@ -41,6 +41,7 @@ use Illuminate\Database\Eloquent\Model;
 class Host extends Authenticatable
 {
 	use Notifiable;
+	protected $guard = 'host';
 	protected $table = 'host';
 	protected $primaryKey = 'Host_ID';
 	public $timestamps = false;
@@ -77,4 +78,7 @@ class Host extends Authenticatable
 	{
 		return $this->hasMany(Subscription::class, 'Host_ID');
 	}
+	protected $hidden = [
+		'password', 'remember_token',
+	];
 }

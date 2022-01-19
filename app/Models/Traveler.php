@@ -31,6 +31,7 @@ use Illuminate\Database\Eloquent\Model;
 class Traveler extends Model
 {
 	use Notifiable;
+	protected $guard = 'traveler';
 	protected $table = 'traveler';
 	protected $primaryKey = 'Traveler_ID';
 	public $timestamps = false;
