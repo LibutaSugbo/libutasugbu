@@ -39,7 +39,7 @@ Route::prefix('host')->group(function(){
 
 Route::prefix('host')->name('host.')->group(function(){
     Route::middleware(['guest:host'])->group(function(){
-        Route::view('/login', 'host.session.login')->name('create');
+        Route::view('/login', 'host.session.login')->name('login');
         //Route::get('/login', [SessionController::class,'create']);
         Route::post('/loginstore', [SessionController::class,'loginstore'])->name('loginstore');
         //Route::post('/loginstore', [SessionController::class,'loginstore']);
@@ -73,7 +73,7 @@ Route::get('/logout', [SessionController::class,'destroy'])->middleware('auth');
 Route::get('/resortNewProfile', [AccommodationController::class,'create']);
 Route::get('/addAccommodation', [AccommodationController::class,'addAccommodation']);
 Route::get('/addPackageDeal', [AccommodationController::class,'addPackageDeal']);
-Route::get('/page2', [RegistrationController::class,'page2']);
+
 
 Route::get('/accountOptions', [AccommodationController::class,'accountOptions']);
 Route::get('/displayItems', [AccommodationController::class,'displayItems']);

@@ -54,4 +54,7 @@ class Traveler extends Model
 		'Login_Name',
 		'Password'
 	];
+	public function getAuthPassword(){
+		return $this->Password;
+		}
 }

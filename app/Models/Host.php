@@ -50,7 +50,9 @@ class Host extends Authenticatable
 		'Host_ZIP' => 'int',
 		'Host_ContactNum' => 'int'
 	];
-
+	public function getAuthPassword(){
+    	return $this->Host_Password;
+	}
 	protected $fillable = [
 		'Host_BName',
 		'Host_LName',
@@ -68,7 +70,7 @@ class Host extends Authenticatable
 		'Host_Type',
 		'Host_Website'
 	];
-
+	
 	public function promotions()
 	{
 		return $this->hasMany(Promotion::class, 'Host_ID');

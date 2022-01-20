@@ -10,13 +10,12 @@ use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Support\Facades\Validator; 
 use Illuminate\Validation\ValidationException;
-
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class SessionController extends Controller
 {
     
-    public function create(){
+    public function login(){
     
         return view('host.session.login');
     }
@@ -30,12 +29,13 @@ class SessionController extends Controller
         ]);
         
         $creds= $request->only('Host_Email','password');
+        
         if(Auth::guard('host')->attempt($creds) ){
-            return redirect('host.newProfile');
+            return redirect()->route('host.newProfile');
         }else{
-            return back()->with('fail','Incorrect credentials');
+            return redirect()->route('host.login')->with('fail','Incorrect credentials');
         }
-
+        /*
         throw ValidationException::withMessage([
             'email' => 'Your provided credentials could not be verified.'
         ]);
@@ -43,7 +43,7 @@ class SessionController extends Controller
         return back()->withErrors([
             'message' => 'The email or password is incorrect, please try again'
         ]);
-        
+        */
     }
     public function destroy(){
         auth()->logout();
