@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Host\HostController;
 use App\Http\Controllers\Host\SessionController;
 use App\Http\Controllers\Host\AccommodationController;
+use Illuminate\Support\Facades\Auth;
 //require __DIR__ . '\host.php';
 Route::get('/', function () {
     return view('welcome');
@@ -35,6 +36,19 @@ Route::prefix('host')->group(function(){
     });
 });
 */
+
+Route::prefix('host')->name('host.')->group(function(){
+    Route::middleware(['guest:host'])->group(function(){
+        Route::view('/login', 'host.session.login')->name('create');
+        //Route::get('/login', [SessionController::class,'create']);
+        Route::post('/loginstore', [SessionController::class,'loginstore'])->name('loginstore');
+        //Route::post('/loginstore', [SessionController::class,'loginstore']);
+    });
+    Route::middleware(['auth:host'])->group(function(){
+        //Route::get('/newProfile', [AccommodationController::class,'newProfile']);
+        Route::view('/newProfile', 'host.newProfile')->name('newProfile');
+    });
+});  
 Route::get('/signup', [HostController::class,'create'])->middleware('guest');
 Route::get('/su-resort', [HostController::class,'createresort'])->middleware('guest');
 Route::post('/storeSu_resort', [HostController::class,'storeresort'])->middleware('guest',);
@@ -50,14 +64,12 @@ Route::post('/storeSu_tourspot', [HostController::class,'storetour'])->middlewar
 
 Route::get('/verification', [HostController::class,'verification']);
 Route::get('/subscription', [HostController::class,'subscription']);
-
-Route::get('/login', [SessionController::class,'create'])->middleware('guest');
+/*
+Route::get('/login', [SessionController::class,'create'])->middleware('guest'); 
 Route::post('/loginstore', [SessionController::class,'loginstore']);
 Route::get('/logout', [SessionController::class,'destroy'])->middleware('auth');
-Route::middleware(['auth'])->group(function() {
-    Route::view('/newProfile','host.newProfile')->name('newProfile');
-});
 
+*/
 Route::get('/resortNewProfile', [AccommodationController::class,'create']);
 Route::get('/addAccommodation', [AccommodationController::class,'addAccommodation']);
 Route::get('/addPackageDeal', [AccommodationController::class,'addPackageDeal']);
@@ -67,5 +79,5 @@ Route::get('/accountOptions', [AccommodationController::class,'accountOptions'])
 Route::get('/displayItems', [AccommodationController::class,'displayItems']);
 Route::get('/history', [AccommodationController::class,'history']);
 Route::get('/messages', [AccommodationController::class,'messages']);
-Route::get('/newProfile', [AccommodationController::class,'newProfile'])->middleware('auth');
+//Route::get('/newProfile', [AccommodationController::class,'newProfile']);
 Route::get('/notification', [AccommodationController::class,'notification']);

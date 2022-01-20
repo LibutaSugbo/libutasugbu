@@ -22,7 +22,7 @@ class SessionController extends Controller
     }
     public function loginstore(Request $request){
 
-        $attributes = request()->validate([
+        $request->validate([
             'Host_Email' => 'required|email|exists:host,Host_Email',
             'password' => 'required|min:6'
         ],[
@@ -31,7 +31,7 @@ class SessionController extends Controller
         
         $creds= $request->only('Host_Email','password');
         if(Auth::guard('host')->attempt($creds) ){
-            return redirect('session.newProfile');
+            return redirect('host.newProfile');
         }else{
             return back()->with('fail','Incorrect credentials');
         }
