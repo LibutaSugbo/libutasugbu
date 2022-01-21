@@ -36,7 +36,9 @@ Route::prefix('host')->group(function(){
     });
 });
 */
-
+Route::get('/app', function () {
+    return view('layouts.app');
+});
 Route::prefix('host')->name('host.')->group(function(){
     Route::middleware(['guest:host'])->group(function(){
         Route::view('/login', 'host.session.login')->name('login');
@@ -81,3 +83,7 @@ Route::get('/history', [AccommodationController::class,'history']);
 Route::get('/messages', [AccommodationController::class,'messages']);
 //Route::get('/newProfile', [AccommodationController::class,'newProfile']);
 Route::get('/notification', [AccommodationController::class,'notification']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
