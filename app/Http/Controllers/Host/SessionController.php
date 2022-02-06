@@ -11,7 +11,6 @@ use Illuminate\Validation\Rules\Password;
 use Illuminate\Support\Facades\Validator; 
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class SessionController extends Controller
 {
