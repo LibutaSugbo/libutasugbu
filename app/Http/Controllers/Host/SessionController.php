@@ -27,19 +27,14 @@ class SessionController extends Controller
         ],[
             'Host_Email.exists'=>'This email does not exist'
         ]);
-        try {
-
-            $creds= $request->only('Host_Email','password');
         
-            Auth::guard('host')->attempt($creds); 
-            redirect()->route('host.newProfile');
-          
-          } catch (\Exception $e) {
-          
-              return $e->redirect()->route('host.login')->with('fail','Incorrect credentials');
-          }
+        $creds= $request->only('Host_Email','password');
         
-        
+        if(Auth::guard('host')->attempt($creds) ){
+            return redirect()->route('host.newProfile');
+        }else{
+            return redirect()->route('host.login')->with('fail','Incorrect credentials');
+        }
         /*
         throw ValidationException::withMessage([
             'email' => 'Your provided credentials could not be verified.'
